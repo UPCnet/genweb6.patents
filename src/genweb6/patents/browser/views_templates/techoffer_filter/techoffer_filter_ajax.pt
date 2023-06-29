@@ -1,0 +1,29 @@
+<tal:block tal:define="continguts view/get_content">
+  <article class="tileItem" tal:repeat="contingut continguts">
+    <tal:block tal:define="item_url contingut/getURL|contingut/absolute_url;
+                           item_obj python:contingut.getObject();
+                           item_has_lead_image python:bool(item_obj.image);">
+
+      <div class="tileImageContainer" tal:condition="item_has_lead_image">
+        <a tal:attributes="href item_url">
+          <img tal:define="scales item_obj/@@images;
+                           scale python:scales.scale('image', 'thumb')"
+              tal:replace="structure python:scale and scale.tag(css_class='tileImage') or None" />
+        </a>
+      </div>
+
+      <h2 class="tileHeadline">
+        <a class="summary url"
+           tal:attributes="href item_url;"
+           tal:content="contingut/Title">
+          Title
+        </a>
+      </h2>
+      
+      <span class="documentByLine" tal:condition="contingut/Description" tal:content="contingut/Description">
+        Description
+      </span>
+      <div class="visualClear"></div>
+    </tal:block>
+  </article>
+</tal:block>

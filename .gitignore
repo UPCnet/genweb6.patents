@@ -37,3 +37,7 @@ report.html
 reports/
 venv/
 # excludes
+
+src/genweb6.theme
+
+reports/

@@ -54,7 +54,9 @@ setup(
         'z3c.jbot',
         'plone.api>=1.8.4',
         'plone.app.dexterity',
-    ],
+        'collective.easyform',
+        'genweb6.theme'
+],
     extras_require={
         'test': [
             'plone.app.testing',

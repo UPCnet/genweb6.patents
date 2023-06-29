@@ -1,0 +1,97 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+
+      lang="en"
+
+      metal:use-macro="context/main_template/macros/master"
+
+      i18n:domain="ploneconf.site">
+
+<body>
+
+<metal:content-core fill-slot="main">
+<header>
+    <h1 tal:content="context/title"></h1>
+</header>
+<metal:block define-macro="content-core">
+<div id="content-core">
+
+
+    <p>Reference number: <span tal:content="context/ref_num"></span></p>
+   
+    <tal:block 
+        tal:define="scale_func context/@@images;
+                    scaled_image python: getattr(context.aq_explicit, 'image', False) and scale_func.scale('image', scale='preview')"
+        tal:condition="not:context/not_show_image">
+        <figure class="newsImageContainer" tal:condition="python: scaled_image">
+            <a tal:define="here_url context/@@plone_context_state/object_url;
+                           large_image python: scale_func.scale('image', scale='large');"
+               tal:attributes="href large_image/url">
+                <img tal:replace="structure python: large_image.tag(css_class='newsImage')" />
+                <figcaption tal:condition="context/image_caption|nothing"
+                    tal:content="structure context/image_caption"> </figcaption>
+            </a>
+        </figure>
+  </tal:block>
+    
+    <div id="parent-fieldname-text">
+        <div class="boxbg-gray success">
+            <h3><strong>Business opportunity</strong></h3>
+            <p tal:content="context/description"></p>
+            <ul class="list-links-upc">
+                <li tal:content="context/opportunity"></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="box">
+                    <h2>The Challenge</h2>
+                    <tal:block tal:replace="structure context/solution/output"></tal:block>
+                    <h2>The Technology</h2>
+                    <tal:block tal:replace="structure context/technology/output"></tal:block>
+                    <h2>Innovative advantagess</h2>
+                    <tal:block tal:replace="structure context/advantages/output"></tal:block>
+                    <h2>Current stage of development</h2>
+                    <tal:block tal:replace="structure context/dev_stage/output"></tal:block>
+                    <h2>Applications and Target Market</h2>
+                    <tal:block tal:replace="structure context/applications/output"></tal:block>
+                </div>
+            </div>
+            <div 
+                tal:define="scale_func context/@@images;
+                            image1_large python: getattr(context.aq_explicit, 'image1', False) and scale_func.scale('image1', scale='large', direction='up');
+                            image2_large python: getattr(context.aq_explicit, 'image2', False) and scale_func.scale('image2', scale='large', direction='up')"
+                class="col-md-4">
+    
+                <tal:img1block tal:condition="python: bool(image1_large)">
+                    <img tal:replace="structure python: image1_large.tag()"/>
+                    <p tal:define="caption context/caption1 | nothing"
+                       tal:condition="python: bool(caption)" 
+                       class="success card p-3 text-bg-light mb-4" tal:content="caption"></p>
+                </tal:img1block>
+
+                <tal:img2block tal:condition="python: bool(image2_large)">
+                    <img tal:replace="structure python: image2_large.tag()"/>
+                    <p tal:define="caption context/caption2 | nothing"
+                        tal:condition="python: bool(caption)" 
+                        class="success card p-3 text-bg-light mb-4" tal:content="caption"></p>
+                </tal:img2block>
+                
+                <h2>Patent Status</h2>
+                <p tal:content="context/patent_status"></p>
+                <h2>Contact</h2>
+                <p>Servei de Gestió de la Innovació<br/>
+                T. + 34 93 413 623<br/>
+                gestio.innovacio@upc.edu</p>
+                <h2>See more technologies at</h2>
+                <a tal:define="patents_link string:https://www.upc.edu/innovacio/ca/patents/oferta-tecnologica"
+                tal:attributes="href patents_link" tal:content="patents_link"></a>
+            </div>
+        </div>
+    </div>
+</div>
+</metal:block>
+</metal:content-core>
+
+</body>
+
+</html>

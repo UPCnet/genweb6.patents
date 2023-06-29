@@ -3,6 +3,7 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="genweb6.patents">
 
   <i18n:registerTranslations directory="locales" />
@@ -13,9 +14,18 @@
   -->
   <!--<includeDependencies package="." />-->
 
+  <include package="z3c.jbot" file="meta.zcml" />
+
   <include package=".browser" />
 
   <include file="permissions.zcml" />
+
+  <browser:page
+     name="view"
+     for="genweb6.patents.content.techoffer.techoffer.ITechOffer"
+     template="content/techoffer/techoffer.pt"
+     permission="zope2.View"
+    />
 
   <genericsetup:registerProfile
       name="default"

@@ -11,6 +11,27 @@
       layer="genweb6.patents.interfaces.IGenweb6PatentsLayer"
       />
 
+  <browser:page
+      name="techoffer_filter"
+      for="Products.CMFCore.interfaces.IFolderish"
+      class=".views.TechOfferFilterView"
+      layer="genweb6.patents.interfaces.IGenweb6PatentsLayer"
+      permission="zope2.View"
+      template="views_templates/techoffer_filter/techoffer_filter.pt"
+      menu="plone_displayviews"
+      title="Technological Offer Filter"
+      />
+
+
+ <browser:page
+      name="techoffer_filter_query"
+      for="Products.CMFCore.interfaces.IFolderish"
+      class=".views.TechOfferFilterView"
+      layer="genweb6.patents.interfaces.IGenweb6PatentsLayer"
+      permission="zope2.View"
+      template="views_templates/techoffer_filter/techoffer_filter_ajax.pt"
+      />
+
   <!-- Publish static files -->
   <plone:static
       name="genweb6.patents"
