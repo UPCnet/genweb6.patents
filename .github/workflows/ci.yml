@@ -55,7 +55,7 @@ jobs:
       - name: Run tests
         run: |
           source venv/bin/activate
-          tox -e py3.11-test
+          tox -e py311-test
         if: ${{ steps.cache-buildout-restore.outputs.cache-hit == 'true' }}
   
   lint:
@@ -79,7 +79,7 @@ jobs:
         run: |
           source venv/bin/activate
           warn="false"
-          tox -e py3.11-lint || \
+          tox -e py311-lint || \
             echo "::warning title=Linter Warning::Your code has not passed the linter stage. Please check out the lint-report artifact"           
         if: ${{ steps.cache-buildout-restore.outputs.cache-hit == 'true' }}
 
