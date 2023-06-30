@@ -2,4 +2,4 @@
 setuptools
 zc.buildout
 tox
-falke8
+flake8
