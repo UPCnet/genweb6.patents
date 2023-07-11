@@ -6,10 +6,6 @@
 
   <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
   <include package="z3c.jbot" file="meta.zcml" />
-  <browser:jbot
-      directory="overrides"
-      layer="genweb6.patents.interfaces.IGenweb6PatentsLayer"
-      />
 
   <browser:page
       name="techoffer_filter"
@@ -23,7 +19,7 @@
       />
 
 
- <browser:page
+  <browser:page
       name="techoffer_filter_query"
       for="Products.CMFCore.interfaces.IFolderish"
       class=".views.TechOfferFilterView"
@@ -31,6 +27,14 @@
       permission="zope2.View"
       template="views_templates/techoffer_filter/techoffer_filter_ajax.pt"
       />
+       
+  <browser:page
+    name="configure_techoffer"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".views.configure_techoffer"
+    layer="genweb6.patents.interfaces.IGenweb6PatentsLayer"
+    permission="cmf.ManagePortal"
+    />
 
   <!-- Publish static files -->
   <plone:static

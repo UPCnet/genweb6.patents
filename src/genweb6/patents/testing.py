@@ -20,16 +20,18 @@ class Genweb6PatentsLayer(PloneSandboxLayer):
         # layer.
         import plone.app.dexterity
         self.loadZCML(package=plone.app.dexterity)
-        import plone.restapi
-        self.loadZCML(package=plone.restapi)
+        import collective.easyform
+        self.loadZCML(package=collective.easyform)
+        import collective.easyformplugin.createdx
+        self.loadZCML(package=collective.easyformplugin.createdx)
         self.loadZCML(package=genweb6.patents)
+        
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'genweb6.patents:default')
 
 
 GENWEB6_PATENTS_FIXTURE = Genweb6PatentsLayer()
-
 
 GENWEB6_PATENTS_INTEGRATION_TESTING = IntegrationTesting(
     bases=(GENWEB6_PATENTS_FIXTURE,),

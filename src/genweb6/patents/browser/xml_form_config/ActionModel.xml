@@ -1,0 +1,28 @@
+<model xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns:easyform="http://namespaces.plone.org/supermodel/easyform" xmlns="http://namespaces.plone.org/supermodel/schema">
+  <schema>
+    <field name="createdx" type="collective.easyformplugin.createdx.actions.CreateDX">
+      <content_type>TechOffer</content_type>
+      <location>/ca/patents</location>
+      <mappings>
+        <element>title title</element>
+        <element>description description</element>
+        <element>ref_num ref_num</element>
+        <element>category category</element>
+        <element>solution solution</element>
+        <element>technology technology</element>
+        <element>advantages advantages</element>
+        <element>dev_stage dev_stage</element>
+        <element>applications applications</element>
+        <element>image image</element>
+        <element>image_caption image_caption</element>
+        <element>image1 image1</element>
+        <element>caption1 caption1</element>
+        <element>image2 image2</element>
+        <element>caption2 caption2</element>
+        <element>opportunity opportunity</element>
+        <element>patent_status patent_status</element>
+      </mappings>
+      <title>createdx</title>
+    </field>
+  </schema>
+</model>

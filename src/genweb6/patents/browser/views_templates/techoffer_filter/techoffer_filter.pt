@@ -33,6 +33,12 @@
               <label class="form-check-label" tal:content="tag"></label>
             </p>
           </div>
+          <div tal:condition='python: checkPermission("Modify portal content", context)'>
+            
+            <h3>Offers to review</h3>
+              <a tal:attributes='href view/get_draft_collection_path'
+                 tal:content='view/get_draft_collection_path'></a>
+          </div>
         </div>
       </div>
       <div class="col-md-9">

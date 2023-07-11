@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 
 from plone.app.contenttypes import _
+from plone.app.dexterity import textindexer
 from plone.app.textfield import RichText
 from plone.dexterity.content import Item
+
 from plone.namedfile import field as namedfile
 from plone.supermodel import model
 from zope import schema
@@ -16,6 +18,10 @@ class ITechOffer(model.Schema):
     #   title = schema.TextLine(...)
     #   description = schema.Text(...)
 
+    # textindexer.searchable('title')
+    # textindexer.searchable('description')
+
+    textindexer.searchable('ref_num')
     ref_num = schema.TextLine(
         title=_(u"Reference number"),
         description=u"",
@@ -30,26 +36,32 @@ class ITechOffer(model.Schema):
             'c'
         ]
     )
+
+    textindexer.searchable('solution')
     solution = RichText(
         title=_(u"Solution"),
         max_length=800
     )
-
+    
+    textindexer.searchable('technology')
     technology = RichText(
         title=_(u"Technology"),
         max_length=600
     )
-
+    
+    textindexer.searchable('advantages')
     advantages = RichText(
         title=_(u"Innovative advantages"),
         max_length=1000
     )
-
+    
+    textindexer.searchable('dev_stage')
     dev_stage = RichText(
         title=_(u"Current stage of development"),
         max_length=350
     )
-
+    
+    textindexer.searchable('applications')
     applications = RichText(
         title=_(u"Applications and Target Market"),
         max_length=400
@@ -60,19 +72,6 @@ class ITechOffer(model.Schema):
         description=u"",
         required=False,
     )
-
-    not_show_image = schema.Bool(
-        title=_GwP(u"not_show_image"),
-        description=u"",
-        required=False,
-    )
-
-    image_caption = schema.TextLine(
-        title=_(u"Lead Image Caption"),
-        description=u"",
-        required=False,
-    )
-
 
     image1 = namedfile.NamedBlobImage(
         title=_(u"First picture"),

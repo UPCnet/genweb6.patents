@@ -1,0 +1,94 @@
+<model xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns:easyform="http://namespaces.plone.org/supermodel/easyform" xmlns="http://namespaces.plone.org/supermodel/schema">
+  <schema>
+    <field name="title" type="zope.schema.TextLine">
+      <description/>
+      <title>Title</title>
+    </field>
+    <field name="description" type="zope.schema.Text">
+      <description/>
+      <required>False</required>
+      <title>Description</title>
+    </field>
+    <field name="ref_num" type="zope.schema.TextLine">
+      <description/>
+      <title>Reference number</title>
+    </field>
+    <field name="category" type="zope.schema.Choice" easyform:serverSide="False" easyform:THidden="False">
+      <description/>
+      <title>Category</title>
+      <values>
+        <element>a</element>
+        <element>b</element>
+        <element>c</element>
+      </values>
+    </field>
+    <field name="solution" type="plone.app.textfield.RichText">
+      <description/>
+      <title>Solution</title>
+    </field>
+    <field name="technology" type="plone.app.textfield.RichText">
+      <description/>
+      <title>Technology</title>
+    </field>
+    <field name="advantages" type="plone.app.textfield.RichText">
+      <description/>
+      <title>Innovative advantages</title>
+    </field>
+    <field name="dev_stage" type="plone.app.textfield.RichText">
+      <description/>
+      <title>Current stage of development</title>
+    </field>
+    <field name="applications" type="plone.app.textfield.RichText">
+      <description/>
+      <title>Applications and Target Market</title>
+    </field>
+    <field name="image" type="plone.namedfile.field.NamedBlobImage">
+      <description/>
+      <required>False</required>
+      <title>Lead Image</title>
+    </field>
+    <field name="image1" type="plone.namedfile.field.NamedBlobImage">
+      <description/>
+      <required>False</required>
+      <title>First picture</title>
+    </field>
+    <field name="caption1" type="zope.schema.TextLine">
+      <description/>
+      <required>False</required>
+      <title>First picture caption</title>
+    </field>
+    <field name="image2" type="plone.namedfile.field.NamedBlobImage" easyform:serverSide="False" easyform:THidden="False">
+      <description/>
+      <required>False</required>
+      <title>Second picture</title>
+    </field>
+    <field name="caption2" type="zope.schema.TextLine">
+      <description/>
+      <required>False</required>
+      <title>Second picture caption</title>
+    </field>
+    <field name="opportunity" type="zope.schema.Choice" easyform:serverSide="False" easyform:THidden="False">
+      <description/>
+      <title>Business Opportunity</title>
+      <values>
+        <element>Technology available to be licensed</element>
+        <element>Technology available to be licensed with technical cooperation</element>
+        <element>Others</element>
+      </values>
+    </field>
+    <field name="patent_status" type="zope.schema.Choice" easyform:serverSide="False" easyform:THidden="False">
+      <description/>
+      <title>Patent Status</title>
+      <values>
+        <element>Not possibility of patent</element>
+        <element>Pending of protection</element>
+        <element>Applied patent</element>
+        <element>PCT application</element>
+        <element>Approved patent</element>
+        <element>Denied patent</element>
+        <element>Other forms of protection</element>
+        <element>Industrial secret</element>
+      </values>
+    </field>
+  </schema>
+</model>
