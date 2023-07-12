@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<registry>
+
+  <records
+    interface="Products.CMFPlone.interfaces.IBundleRegistry"
+    prefix="plone.bundles/patents-bundle">
+
+    <value key="enabled">True</value>
+    <value key="compile">True</value>
+    <value key="resources">
+      <element>patents-main</element>
+    </value>
+    <value key="jscompilation" />
+    <value key="csscompilation">++theme++genweb6.patents/stylesheets/theme-patents.min.css</value>
+
+  </records>
+
+</registry>

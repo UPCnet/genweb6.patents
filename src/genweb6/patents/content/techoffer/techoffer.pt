@@ -6,7 +6,7 @@
 
       i18n:domain="ploneconf.site">
 
-<body>
+      <body>
 
 <metal:content-core fill-slot="main">
 <header>
@@ -23,18 +23,12 @@
     </strong>
     </p>
    
-    <tal:block 
-        tal:define="scale_func context/@@images;
-                    scaled_image python: getattr(context.aq_explicit, 'image', False) and scale_func.scale('image', scale='preview');"
-        tal:condition="python: bool(context.image)">
-        <figure class="newsImageContainer" tal:condition="python: scaled_image">
-            <a tal:define="here_url context/@@plone_context_state/object_url;
-                           large_image python: scale_func.scale('image', scale='huge', direction='up');"
-               tal:attributes="href large_image/url">
-                <img tal:replace="structure python: large_image.tag(css_class='newsImage')" />
-            </a>
-        </figure>
-  </tal:block>
+    <figure tal:define="scale_func context/@@images;"
+            tal:condition="python: bool(context.image)">
+        <img tal:replace="structure python: scale_func.scale('image', scale='huge', direction='up').tag()" />
+    </figure>
+
+
     
     <div id="parent-fieldname-text">
         <!-- <div class="boxbg-gray success">
@@ -44,8 +38,8 @@
                 <li tal:content="context/opportunity"></li>
             </ul>
         </div> -->
-        <div class="row">
-            <div class="col-md-8">
+        <div class="row-fluid">
+            <div class="span8">
                 <div class="box">
                     <h3>The Challenge</h3>
                     <tal:block tal:replace="structure context/solution/output"></tal:block>
@@ -56,14 +50,16 @@
                     <h3>Current stage of development</h3>
                     <tal:block tal:replace="structure context/dev_stage/output"></tal:block>
                     <h3>Applications and Target Market</h3>
-                    <tal:block tal:replace="structure context/applications/output"></tal:block>
+                    <div class='last-richtext-paragraph'>
+                        <tal:block tal:replace="structure context/applications/output"></tal:block>
+                    </div>
                 </div>
             </div>
             <div 
                 tal:define="scale_func context/@@images;
                             image1_large python: getattr(context.aq_explicit, 'image1', False) and scale_func.scale('image1', scale='large', direction='up');
                             image2_large python: getattr(context.aq_explicit, 'image2', False) and scale_func.scale('image2', scale='large', direction='up')"
-                class="col-md-4">
+                class="span4">
     
                 <tal:img1block tal:condition="python: bool(image1_large)">
                     <img tal:replace="structure python: image1_large.tag()"/>

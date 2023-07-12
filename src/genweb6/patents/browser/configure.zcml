@@ -36,11 +36,4 @@
     permission="cmf.ManagePortal"
     />
 
-  <!-- Publish static files -->
-  <plone:static
-      name="genweb6.patents"
-      type="plone"
-      directory="static"
-      />
-
 </configure>

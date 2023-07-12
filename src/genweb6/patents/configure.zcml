@@ -19,6 +19,7 @@
   <include package=".browser" />
 
   <include file="permissions.zcml" />
+  <include file="upgrades.zcml" />
 
   <browser:page
      name="view"
@@ -51,5 +52,12 @@
       />
 
   <!-- -*- extra stuff goes here -*- -->
+
+  <!-- Publish static files -->
+  <plone:static
+      name="genweb6.patents"
+      type="theme"
+      directory="theme"
+      />
 
 </configure>
