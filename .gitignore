@@ -38,7 +38,7 @@ reports/
 venv/
 # excludes
 
-src/
-src/genweb6
+src/*
+!src/genweb6
 
 reports/
