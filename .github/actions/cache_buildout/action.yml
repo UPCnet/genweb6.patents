@@ -16,6 +16,7 @@ inputs:
       ./bin
       ./parts
       ./src/genweb6.theme
+      ./src/collective.easyformplugin.createdx
 
 # Please change the default here and avoid using it in the actual workflow
 # It is defined as an input for parametrization purposes
