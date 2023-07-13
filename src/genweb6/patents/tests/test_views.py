@@ -58,8 +58,9 @@ class ViewsIntegrationTest(unittest.TestCase):
         # check that initially there is no patents-py folder
         self.assertIsNone(self.portal['ca'].get('patents-py')) 
 
-        expected_response = f'Patents are located at {self.portal.absolute_url()}/ca/patents-py\n' +\
-                            f'Create technological offer form is available at {self.portal.absolute_url()}/ca/patents-py/create-technological-offer'
+        expected_response = f'Patents are located at {self.portal.absolute_url()}/ca/patents-py\n\n' +\
+                            f'Create technological offer form is available at {self.portal.absolute_url()}/ca/patents-py/create-technological-offer\n\n' +\
+                            f'Collection of technological offers in draft state is available at {self.portal.absolute_url()}/ca/patents-py/technological-offers-to-review'
 
         # check that the view returned expected response
         self.assertEqual(expected_response, view())
