@@ -10,6 +10,7 @@
 
 <metal:content-core fill-slot="main">
 <header>
+    <img tal:attributes="src string:${context/absolute_url}/@@gw-logo" class="print-only" id='head-upc-logo'  />
     <h1 tal:content="context/title"></h1>
 </header>
 <metal:block define-macro="content-core">
@@ -31,13 +32,6 @@
 
     
     <div id="parent-fieldname-text">
-        <!-- <div class="boxbg-gray success">
-            <h3><strong>Business opportunity</strong></h3>
-            <p tal:content="context/description"></p>
-            <ul class="list-links-upc">
-                <li tal:content="context/opportunity"></li>
-            </ul>
-        </div> -->
         <div class="row-fluid">
             <div class="span8">
                 <div class="box">

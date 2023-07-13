@@ -2,17 +2,17 @@
 body.portaltype-techoffer {
   /*Make all grid-sized elements block level again*/
 }
+/* line 5, ../scss/_techoffer.scss */
+body.portaltype-techoffer .print-only {
+  display: none;
+}
 @media only screen and (max-width: 639px) {
-  /* line 7, ../scss/_techoffer.scss */
+  /* line 11, ../scss/_techoffer.scss */
   body.portaltype-techoffer .row-fluid [class*="span"] {
     float: none !important;
     display: block !important;
     width: auto !important;
     margin-left: 0 !important;
-  }
-  /* line 14, ../scss/_techoffer.scss */
-  body.portaltype-techoffer .print-only {
-    display: none !important;
   }
 }
 @media print {
@@ -22,31 +22,44 @@ body.portaltype-techoffer {
     font-size: 12pt !important;
     padding: 0px !important;
   }
-  /* line 26, ../scss/_techoffer.scss */
+  /* line 27, ../scss/_techoffer.scss */
   body.portaltype-techoffer #above-content-wrapper,
   body.portaltype-techoffer #content-header,
   body.portaltype-techoffer #back-to-top,
   body.portaltype-techoffer #portal-column-one {
     display: none !important;
   }
-  /* line 33, ../scss/_techoffer.scss */
+  /* line 34, ../scss/_techoffer.scss */
   body.portaltype-techoffer .container {
     margin: 0px !important;
     padding: 0px !important;
     max-width: 100% !important;
   }
-  /* line 39, ../scss/_techoffer.scss */
+  /* line 40, ../scss/_techoffer.scss */
   body.portaltype-techoffer a, body.portaltype-techoffer a:visited {
     color: black !important;
     text-decoration: none !important;
   }
-  /* line 45, ../scss/_techoffer.scss */
+  /* line 46, ../scss/_techoffer.scss */
+  body.portaltype-techoffer h1 {
+    margin-top: 0px !important;
+  }
+  /* line 50, ../scss/_techoffer.scss */
   body.portaltype-techoffer h3, body.portaltype-techoffer h4 {
     font-size: 16pt !important;
     margin-bottom: 0.5rem !important;
   }
-  /* line 50, ../scss/_techoffer.scss */
+  /* line 55, ../scss/_techoffer.scss */
   body.portaltype-techoffer .box, body.portaltype-techoffer #content-core, body.portaltype-techoffer #main-container, body.portaltype-techoffer .row-fluid [class*="span"] {
     margin-bottom: 0px !important;
+  }
+  /* line 59, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .print-only {
+    display: initial !important;
+  }
+  /* line 64, ../scss/_techoffer.scss */
+  body.portaltype-techoffer #head-upc-logo, body.portaltype-techoffer img#head-upc-logo {
+    margin-bottom: 1rem !important;
+    max-width: 250px;
   }
 }

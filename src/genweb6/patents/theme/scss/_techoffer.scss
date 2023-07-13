@@ -2,6 +2,10 @@
 body.portaltype-techoffer {
 /*Make all grid-sized elements block level again*/
 
+    .print-only {
+        display: none;
+    }
+
     @media only screen and (max-width: 639px){
         
         .row-fluid [class*="span"] {
@@ -11,9 +15,6 @@ body.portaltype-techoffer {
         margin-left: 0 !important;
         }
 
-        .print-only {
-            display: none !important;
-        }
     }
   
     @media print {
@@ -42,6 +43,10 @@ body.portaltype-techoffer {
             
         }
 
+        h1 {
+            margin-top: 0px !important;
+        }
+
         h3, h4 {
             font-size: 16pt !important;
             margin-bottom: 0.5rem !important;
@@ -50,5 +55,16 @@ body.portaltype-techoffer {
         .box, #content-core, #main-container, .row-fluid [class*="span"]{
             margin-bottom: 0px !important;
         }
+
+        .print-only {
+            display: initial !important;
+            
+        }
+
+        #head-upc-logo, img#head-upc-logo{
+            margin-bottom: 1rem !important;
+            max-width: 250px;
+        }                    
+
     }
 }
