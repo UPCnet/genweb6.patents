@@ -1,6 +1,7 @@
 
 body.portaltype-techoffer {
 /*Make all grid-sized elements block level again*/
+
     @media only screen and (max-width: 639px){
         
         .row-fluid [class*="span"] {
@@ -9,41 +10,45 @@ body.portaltype-techoffer {
         width: auto !important;
         margin-left: 0 !important;
         }
+
+        .print-only {
+            display: none !important;
+        }
     }
   
-  @media print {
+    @media print {
        
-    background: white; 
-    font-size: 12pt !important; 
-    padding:0px !important;
-      
-    
-    #above-content-wrapper, 
-    #content-header,
-    #back-to-top {
-        display: none !important; 
-    }
-      
-    .container {
-    margin: 0px !important;
-    padding: 0px !important;
-    max-width: 100% !important;
-    }
-    
-    a, a:visited {
-        color: black !important;
-        text-decoration: none !important;
+        background: white; 
+        font-size: 12pt !important; 
+        padding:0px !important;
         
-    }
+        
+        #above-content-wrapper, 
+        #content-header,
+        #back-to-top,
+        #portal-column-one {
+            display: none !important; 
+        }
+        
+        .container {
+            margin: 0px !important;
+            padding: 0px !important;
+            max-width: 100% !important;
+        }
+        
+        a, a:visited {
+            color: black !important;
+            text-decoration: none !important;
+            
+        }
 
-    h3, h4 {
-    font-size: 16pt !important;
-    margin-bottom: 0.5rem !important;
-    }
+        h3, h4 {
+            font-size: 16pt !important;
+            margin-bottom: 0.5rem !important;
+        }
 
-    .box, #content-core, #main-container, .row-fluid [class*="span"]{
-    margin-bottom: 0px !important;
-    }
-
+        .box, #content-core, #main-container, .row-fluid [class*="span"]{
+            margin-bottom: 0px !important;
+        }
     }
 }

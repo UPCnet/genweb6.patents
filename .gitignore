@@ -38,6 +38,7 @@ reports/
 venv/
 # excludes
 
-src/genweb6.theme
+src/
+src/genweb6
 
 reports/
