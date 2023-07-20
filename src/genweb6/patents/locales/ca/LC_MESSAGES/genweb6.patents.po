@@ -1,6 +1,3 @@
-#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-#SOME DESCRIPTIVE TITLE.
-#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -12,156 +9,157 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: ca\n"
+"Language-Name: Catalan\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: genweb6.patents\n"
+"Language: ca\n"
 
 #: ../content/techoffer/techoffer.pt:47
 #: ../content/techoffer/techoffer.py:71
 msgid "Applications and Target Market"
-msgstr ""
+msgstr "Aplicacions i mercat objectiu/Applications and Target Market"
 
 #: ../vocabularies.py:18
 msgid "Applied patent"
-msgstr ""
+msgstr "Patent sol·licitada/Applied patent"
 
 #: ../vocabularies.py:20
 msgid "Approved patent"
-msgstr ""
+msgstr "Patent aprovada/Approved patent"
 
 #: ../content/techoffer/techoffer.pt:73
 #: ../content/techoffer/techoffer.py:99
 msgid "Business Opportunity"
-msgstr ""
+msgstr "Oportunitats de negoci/Business Opportunity"
 
 #: ../content/techoffer/techoffer.pt:77
 msgid "Contact"
-msgstr ""
+msgstr "Contacte/Contact"
 
 #: ../content/techoffer/techoffer.pt:45
 #: ../content/techoffer/techoffer.py:65
 msgid "Current stage of development"
-msgstr ""
+msgstr "Fase actual de desenvolupament/Current stage of development"
 
 #: ../vocabularies.py:21
 msgid "Denied patent"
-msgstr ""
+msgstr "Patent denegada/Denied patent"
 
 #: ../content/techoffer/techoffer.py:24
 msgid "Description"
-msgstr ""
+msgstr "Descripció/Description"
 
 #: ../content/techoffer/techoffer.py:82
 msgid "First picture"
-msgstr ""
+msgstr "Primera imatge/First picture"
 
 #: ../content/techoffer/techoffer.py:86
 msgid "First picture caption"
-msgstr ""
+msgstr "Comentari de la primera imatge/First picture caption"
 
 #: ../vocabularies.py:23
 msgid "Industrial secret"
-msgstr ""
+msgstr "Secret industrial/Industrial secret"
 
 #: ../content/techoffer/techoffer.pt:43
 #: ../content/techoffer/techoffer.py:59
 msgid "Innovative advantages"
-msgstr ""
+msgstr "Avantatges innovadors/Innovative advantages"
 
 #: ../configure.zcml:38
 msgid "Installs the genweb6.patents add-on."
-msgstr ""
+msgstr "Instal·lar paquet genweb6.patents/Installs the genweb6.patents add-on."
 
 #: ../content/techoffer/techoffer.py:76
 msgid "Lead Image"
-msgstr ""
+msgstr "Imatge principal/Lead Image"
 
 #: ../vocabularies.py:16
 msgid "Not possibility of patent"
-msgstr ""
+msgstr "No possibilitat de patent/Not possibility of patent"
 
 #: ../vocabularies.py:22
 msgid "Other forms of protection"
-msgstr ""
+msgstr "Altres formes de protecció/Other forms of protection"
 
 #: ../vocabularies.py:40
 msgid "Others"
-msgstr ""
+msgstr "Altres/Others"
 
 #: ../vocabularies.py:19
 msgid "PCT application"
-msgstr ""
+msgstr "PCT sol·licitada/PCT application"
 
 #: ../content/techoffer/techoffer.pt:75
 #: ../content/techoffer/techoffer.py:104
 msgid "Patent Status"
-msgstr ""
+msgstr "Estat de la patent/Patent Status"
 
 #: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:43
 msgid "Pendent offers to review"
-msgstr ""
+msgstr "Ofertes pendents de revisar"
 
 #: ../vocabularies.py:17
 msgid "Pending of protection"
-msgstr ""
+msgstr "Pendent de protecció/Pending of protection"
 
 #: ../content/techoffer/techoffer.py:31
 msgid "Reference number"
-msgstr ""
+msgstr "Número de referència/Reference number"
 
 #: ../content/techoffer/techoffer.py:94
 msgid "Second image caption"
-msgstr ""
+msgstr "Comentari de la segona imatge/Second image caption"
 
 #: ../content/techoffer/techoffer.py:90
 msgid "Second picture"
-msgstr ""
+msgstr "Segona imatge/Second picture"
 
 #: ../content/techoffer/techoffer.pt:80
 msgid "See more technologies at"
-msgstr ""
+msgstr "Veu més tecnologies a/See more technologies at"
 
 #: ../profiles/default/types/TechOffer.xml
 msgid "Technological Offer"
-msgstr ""
+msgstr "Oferta Tecnològica"
 
 #: ../browser/configure.zcml:19
 msgid "Technological Offer Filter"
-msgstr ""
+msgstr "Filtre d'Oferta Tecnológica"
 
 #: ../content/techoffer/techoffer.py:53
 msgid "Technology"
-msgstr ""
+msgstr "Tecnologia/Technology"
 
 #: ../vocabularies.py:30
 msgid "Technology available to be licensed"
-msgstr ""
+msgstr "Tecnologia disponible per a ser llicenciada/Technology available to be licensed"
 
 #: ../vocabularies.py:35
 msgid "Technology available to be licensed with technical cooperation"
-msgstr ""
+msgstr "Tecnologia disponible per a ser llicenciada amb cooperació tècnica/Technology available to be licensed with technical cooperation"
 
 #: ../content/techoffer/techoffer.pt:39
 #: ../content/techoffer/techoffer.py:47
 msgid "The Challenge"
-msgstr ""
+msgstr "El Repte/The Challenge"
 
 #: ../content/techoffer/techoffer.pt:41
 msgid "The Technology"
-msgstr ""
+msgstr "La Tecnologia/The Technology"
 
 #: ../content/techoffer/techoffer.py:17
 msgid "Title"
-msgstr ""
+msgstr "Títol/Title"
 
 #: ../configure.zcml:47
 msgid "Uninstalls the genweb6.patents add-on."
-msgstr ""
+msgstr "Desinstal·lar paquet genweb6.patents"
 
 #: ../content/techoffer/techoffer.pt:94
 msgid "filed under:"
-msgstr ""
+msgstr "arxivat sota:"
 
 #: ../configure.zcml:38
 msgid "genweb6.patents"
@@ -174,9 +172,9 @@ msgstr ""
 #. Default: "Tags"
 #: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:29
 msgid "label_tags"
-msgstr ""
+msgstr "Etiquetes"
 
 #. Default: "Cerca"
 #: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:24
 msgid "search"
-msgstr ""
+msgstr "Filtre"

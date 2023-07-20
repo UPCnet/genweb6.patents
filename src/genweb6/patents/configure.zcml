@@ -50,6 +50,16 @@
       factory=".setuphandlers.HiddenProfiles"
       name="genweb6.patents-hiddenprofiles"
       />
+    
+  <utility
+      name="genweb.patents.vocabularies.patent_status"
+      factory="genweb6.patents.vocabularies.PatentStatus"
+      />
+    
+  <utility
+      name="genweb.patents.vocabularies.business_opportunity"
+      factory="genweb6.patents.vocabularies.BusinessOpportunity"
+      />
 
   <!-- -*- extra stuff goes here -*- -->
 

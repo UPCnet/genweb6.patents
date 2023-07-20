@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from plone.app.contenttypes import _
+from genweb6.patents import _
 from plone.app.dexterity import textindexer
 from plone.app.textfield import RichText
 from plone.dexterity.content import Item
@@ -10,16 +10,21 @@ from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer
 
-from genweb6.patents import _ as _GwP
-
 
 class ITechOffer(model.Schema):
-    # Dublin core adds:
-    #   title = schema.TextLine(...)
-    #   description = schema.Text(...)
+    textindexer.searchable('title')
+    title = schema.TextLine(
+        title=_(u"Title"),
+        description=u"",
+        required=True
+    )
 
-    # textindexer.searchable('title')
-    # textindexer.searchable('description')
+    textindexer.searchable('description')
+    description = schema.Text(
+        title=_(u"Description"),
+        description=u"",
+        required=False
+    )
 
     textindexer.searchable('ref_num')
     ref_num = schema.TextLine(
@@ -27,40 +32,40 @@ class ITechOffer(model.Schema):
         description=u"",
         required=True,
     )
-    
-    category = schema.Choice(
-        title=_(u"Category"),
-        values=[
-            'a',
-            'b',
-            'c'
-        ]
-    )
 
-    textindexer.searchable('solution')
-    solution = RichText(
-        title=_(u"Solution"),
+    # category = schema.Choice(
+    #     title=_(u"Category"),
+    #     values=[
+    #         'a',
+    #         'b',
+    #         'c'
+    #     ]
+    # )
+
+    textindexer.searchable('challenge')
+    challenge = RichText(
+        title=_(u"The Challenge"),
         max_length=800
     )
-    
+
     textindexer.searchable('technology')
     technology = RichText(
         title=_(u"Technology"),
         max_length=600
     )
-    
+
     textindexer.searchable('advantages')
     advantages = RichText(
         title=_(u"Innovative advantages"),
         max_length=1000
     )
-    
+
     textindexer.searchable('dev_stage')
     dev_stage = RichText(
         title=_(u"Current stage of development"),
         max_length=350
     )
-    
+
     textindexer.searchable('applications')
     applications = RichText(
         title=_(u"Applications and Target Market"),
@@ -90,29 +95,16 @@ class ITechOffer(model.Schema):
         required=False
     )
 
-
     opportunity = schema.Choice(
         title=_(u"Business Opportunity"),
-        values=[
-            "Technology available to be licensed",
-            "Technology available to be licensed with technical cooperation",
-            "Others"
-        ]
+        vocabulary="genweb.patents.vocabularies.business_opportunity"
     )
 
     patent_status = schema.Choice(
         title=_(u"Patent Status"),
-        values=[
-            "Not possibility of patent",
-            "Pending of protection",
-            "Applied patent",
-            "PCT application",
-            "Approved patent",
-            "Denied patent",
-            "Other forms of protection",
-            "Industrial secret",
-        ]
+        vocabulary="genweb.patents.vocabularies.patent_status"
     )
+
 
 @implementer(ITechOffer)
 class TechOffer(Item):

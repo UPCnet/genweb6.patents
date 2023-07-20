@@ -1,94 +1,86 @@
 <model xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns:easyform="http://namespaces.plone.org/supermodel/easyform" xmlns="http://namespaces.plone.org/supermodel/schema">
   <schema>
-    <field name="title" type="zope.schema.TextLine">
+    <field name="title" type="zope.schema.TextLine" easyform:serverSide="False" easyform:THidden="False">
       <description/>
-      <title>Title</title>
+      <title>T&#237;tol/Title</title>
     </field>
     <field name="description" type="zope.schema.Text">
       <description/>
       <required>False</required>
-      <title>Description</title>
+      <title>Descripci&#243;/Description</title>
     </field>
     <field name="ref_num" type="zope.schema.TextLine">
       <description/>
-      <title>Reference number</title>
+      <title>N&#250;mero de refer&#232;ncia/Reference number</title>
     </field>
     <field name="category" type="zope.schema.Choice" easyform:serverSide="False" easyform:THidden="False">
+      <default>Buenas</default>
       <description/>
-      <title>Category</title>
-      <values>
-        <element>a</element>
-        <element>b</element>
-        <element>c</element>
-      </values>
+      <title>Categoria/Category</title>
+      <vocabulary>plone.app.vocabularies.Keywords</vocabulary>
     </field>
-    <field name="solution" type="plone.app.textfield.RichText">
+    <field name="challenge" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
       <description/>
-      <title>Solution</title>
+      <max_length>800</max_length>
+      <title>El Repte/The Challenge</title>
     </field>
-    <field name="technology" type="plone.app.textfield.RichText">
+    <field name="technology" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
       <description/>
-      <title>Technology</title>
+      <max_length>600</max_length>
+      <title>Tecnologia/Technology</title>
     </field>
-    <field name="advantages" type="plone.app.textfield.RichText">
+    <field name="advantages" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
+      <default>&lt;p&gt;Hola&lt;/p&gt;</default>
       <description/>
-      <title>Innovative advantages</title>
+      <max_length>1000</max_length>
+      <title>Avantatges innovadors/Innovative advantages</title>
     </field>
-    <field name="dev_stage" type="plone.app.textfield.RichText">
+    <field name="dev_stage" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
       <description/>
-      <title>Current stage of development</title>
+      <max_length>350</max_length>
+      <title>Fase actual de desenvolupament/Current stage of development</title>
     </field>
-    <field name="applications" type="plone.app.textfield.RichText">
+    <field name="applications" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
       <description/>
-      <title>Applications and Target Market</title>
+      <max_length>400</max_length>
+      <title>Aplicacions i mercat objectiu/Applications and Target Market</title>
     </field>
     <field name="image" type="plone.namedfile.field.NamedBlobImage">
       <description/>
       <required>False</required>
-      <title>Lead Image</title>
+      <title>Imatge principal/Lead Image</title>
     </field>
     <field name="image1" type="plone.namedfile.field.NamedBlobImage">
       <description/>
       <required>False</required>
-      <title>First picture</title>
+      <title>Primera imatge/First picture</title>
     </field>
     <field name="caption1" type="zope.schema.TextLine">
       <description/>
       <required>False</required>
-      <title>First picture caption</title>
+      <title>Comentari de la primera imatge/First picture caption</title>
     </field>
     <field name="image2" type="plone.namedfile.field.NamedBlobImage" easyform:serverSide="False" easyform:THidden="False">
       <description/>
       <required>False</required>
-      <title>Second picture</title>
+      <title>Segona imatge/Second picture</title>
     </field>
     <field name="caption2" type="zope.schema.TextLine">
       <description/>
       <required>False</required>
-      <title>Second picture caption</title>
+      <title>Comentari de la segona imatge/Second image caption</title>
     </field>
     <field name="opportunity" type="zope.schema.Choice" easyform:serverSide="False" easyform:THidden="False">
+      <default>Technology available to be licensed</default>
       <description/>
-      <title>Business Opportunity</title>
-      <values>
-        <element>Technology available to be licensed</element>
-        <element>Technology available to be licensed with technical cooperation</element>
-        <element>Others</element>
-      </values>
+      <title>Oportunitats de negoci/Business Opportunity</title>
+      <vocabulary>genweb.patents.vocabularies.business_opportunity</vocabulary>
     </field>
     <field name="patent_status" type="zope.schema.Choice" easyform:serverSide="False" easyform:THidden="False">
+      <default>Not possibility of patent</default>
       <description/>
-      <title>Patent Status</title>
-      <values>
-        <element>Not possibility of patent</element>
-        <element>Pending of protection</element>
-        <element>Applied patent</element>
-        <element>PCT application</element>
-        <element>Approved patent</element>
-        <element>Denied patent</element>
-        <element>Other forms of protection</element>
-        <element>Industrial secret</element>
-      </values>
+      <title>Estat de la patent/Patent Status</title>
+      <vocabulary>genweb.patents.vocabularies.patent_status</vocabulary>
     </field>
   </schema>
 </model>

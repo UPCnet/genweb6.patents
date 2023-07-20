@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<object name="TechOffer" meta_type="Dexterity FTI" i18n:domain="genweb"
+<object name="TechOffer" meta_type="Dexterity FTI" i18n:domain="genweb6.patents"
         xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
-    <property name="title" i18n:translate="">TechOffer</property>
-    <property name="description" i18n:translate="">Technology offer</property>
+    <property name="title" i18n:translate="">Technological Offer</property>
+    <property name="description" i18n:translate="">Technological Offer</property>
     <property name="icon_expr">string:file-earmark-richtext</property>
     <property name="allow_discussion">False</property>
     <property name="global_allow">True</property>
@@ -19,7 +19,10 @@
     <property name="schema_policy">dexterity</property>
 
     <property name="behaviors">
-        <element value="plone.dublincore" />
+        <!--element value="plone.dublincore" /-->
+        <element value="plone.categorization" />
+        <element value="plone.publication" />
+        <element value="plone.ownership" />
         <element value="plone.namefromtitle" />
         <element value="plone.excludefromnavigation" />
         <element value="plone.textindexer"/>

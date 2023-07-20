@@ -14,8 +14,8 @@ class TechOfferFilterView(BrowserView):
         self.context = context
         self.request = request
 
-        self.query =  self._format_query(self.request.form.get('q', ''))
-        
+        self.query = self._format_query(self.request.form.get('q', ''))
+
         self.tags = self.request.form.get('t', '') or []
         if self.tags:
             self.tags = self.tags.split(',')
@@ -29,9 +29,9 @@ class TechOfferFilterView(BrowserView):
                 kw['Subject'] = {'query': self.tags, 'operator': 'and'}
             if self.query:
                 kw['SearchableText'] = self.query
-    
+
         return catalog(portal_type="TechOffer", review_state='published', sort_on='getObjPositionInParent', **kw)
-    
+
     def get_tags(self):
         tags = []
         for res in self.get_content(filtered=False):
@@ -66,25 +66,43 @@ class TechOfferFilterView(BrowserView):
 
         return r_query
 
+
 class configure_techoffer(BrowserView):
     """
 Configura la pàgina de patents:
-    - Crea les carptes .../patents  (si no existeix)
+    - Crea les carpetes .../patents  (si no existeix)
     - Estableix com a vista de ../patents el filtre de oferta tecnològica
     - Crea el formulari .../patents/create-technological-offer, que s'encarrega de crear ofertes tecnològiques.
         - Si el formulari ja existeix, es sobreescriu (es perden tots els canvis fets)
     """
 
     def __call__(self):
+        tags = (
+            "Aerospace",
+            "Information and communication technologies (IoT, Networks )",
+            "Healthcare",
+            "Chemical and materials ",
+            "Energy and Environment",
+            "Leisure and Entertainment",
+            "Food and Agriculture",
+            "Supply chain and Logistics",
+            "Engineering and Industrial",
+            "Construction, Mining and Metals",
+            "Semiconductor and Electronics",
+            "Automotive and Transportation ",
+        )
+
         qi = get_installer(self.context)
 
         required_products = ['genweb6.patents', 'collective.easyform', 'collective.easyformplugin.createdx']
         missing_products = list(filter(lambda prod: not qi.is_product_installed(prod), required_products))
         if missing_products:
             return f'Form not created.\nThere are missing products: {missing_products}'
-                
-        current_path = Path(__file__).parent # La ruta hacia el directorio de este "views.py". Se tiene que tener esto en cuenta en
-                                             # caso de que se mueva esta vista, porque no se encontrarán los xml de "xml_form_config"
+
+        # La ruta hacia el directorio de este "views.py". Se tiene que tener esto en cuenta
+        # en el caso de que se mueva esta vista, porque no se encontrarán los xml de "xml_form_config"
+        current_path = Path(__file__).parent
+
         xml_config_path = current_path / 'xml_form_config'
         with open(xml_config_path / 'FieldsModel.xml', 'r') as f:
             fields_model = f.read()
@@ -93,64 +111,74 @@ Configura la pàgina de patents:
 
         patents = api.content.get('/ca/patents-py')
         if not patents:
-          patents = api.content.create(
-              type='Folder', 
-              id='patents-py', 
-              title='Patents but with python', 
-              container=api.content.get('/ca'),
-              exclude_from_nav=True
-          )
-        patents.setLayout('techoffer_filter')
+            patents = api.content.create(
+              type='Folder',
+              id='patents-py',
+              title='Patents but with python',
+              container=api.content.get('/ca')
+            )
 
-        easyform = patents.get("create-technological-offer")
+        techoffer = patents.get("oferta-tecnologica")
+        if not techoffer:
+            techoffer = api.content.create(
+                type='Folder',
+                id='oferta-tecnologica',
+                title='Oferta Tecnològica/Technological Offer',
+                container=patents,
+                subject=tags
+            )
+
+        techoffer.setLayout('techoffer_filter')
+
+        easyform = techoffer.get("create-technological-offer")
         if easyform:
             api.content.delete(easyform)
-            
+
         easyform = api.content.create(
             type='EasyForm',
             id='create-technological-offer',
-            title='Create Technological Offer',
+            title='Crear Oferta Tecnològica/Create Technological Offer',
             fields_model=fields_model,
             actions_model=actions_model,
-            thanksPageOverride='string:.',
-            thanksPageOverrideAction='redirect_to',
-            container=patents,
-            exclude_from_nav=True
+            container=techoffer,
+            exclude_from_nav=False,
+            thankstitle="Gràcies",
+            thanksdescription="S'ha creat una nova oferta tecnològica. Es revisarà el més aviat possible.",
+            showAll=False,
+            showFields=['title'],
+            includeEmpties=True
         )
-        
-        collection_query  = [
+
+        collection_query = [
             {
-                'i': 'review_state', 
-                'o': 'plone.app.querystring.operation.selection.any', 
+                'i': 'review_state',
+                'o': 'plone.app.querystring.operation.selection.any',
                 'v': ['esborrany', 'visible']
-            }, 
+            },
             {
-                'i': 'portal_type', 
-                'o': 'plone.app.querystring.operation.selection.any', 
+                'i': 'portal_type',
+                'o': 'plone.app.querystring.operation.selection.any',
                 'v': ['TechOffer']
             }
         ]
 
-        collection = patents.get("technological-offers-to-review")
+        collection = techoffer.get("technological-offers-to-review")
         if collection:
             api.content.delete(collection)
 
         collection = api.content.create(
             type='Collection',
             id='technological-offers-to-review',
-            title='Technological offers to review',
+            title='Ofertes tecnològiques per revisar/Technological offers to review',
             query=collection_query,
-            container=patents,
+            container=techoffer,
             exclude_from_nav=True
         )
 
-        
         import transaction
         transaction.commit()
 
         return f"Patents are located at {patents.absolute_url()}\n\n" + \
+               f"Technological offers are located at {techoffer.absolute_url()}\n\n" + \
                f"Create technological offer form is available at {easyform.absolute_url()}\n\n" + \
                f"Collection of technological offers in draft state is available at {collection.absolute_url()}"
-       
-       
-

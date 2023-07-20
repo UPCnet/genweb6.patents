@@ -3,18 +3,19 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       metal:use-macro="context/main_template/macros/master"
-      i18n:domain="plone">
+      i18n:domain="genweb6.patents">
 
-<head>
-  <metal:block fill-slot="top_slot">
-    <tal:insert tal:replace="nothing"
-                tal:define="dummy python:request.set('enable_border', 1);
-                            disable_column_one python:request.set('disable_plone.rightcolumn',1);" />
-  </metal:block>
-</head>
+      <head>
+        <metal:block fill-slot="top_slot"
+                     tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                                 disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
+    </head>
 
 <body>
-  <metal:main metal:fill-slot="content-core">
+  <metal:main metal:fill-slot="main">
+    <header>
+      <h1 tal:content="context/title">Technological Offer</h1>
+    </header>
     <div id="librarysearchpretty" class="filtered_contents_search_pretty row">
       <div class="col-md-3 pe-5">
         <h2 i18n:domain="genweb" i18n:translate="label_filters">Filters</h2>
@@ -33,12 +34,20 @@
               <label class="form-check-label" tal:content="tag"></label>
             </p>
           </div>
-          <div tal:condition='python: checkPermission("Modify portal content", context)'>
-            
-            <h3>Offers to review</h3>
-              <a tal:attributes='href view/get_draft_collection_path'
-                 tal:content='view/get_draft_collection_path'></a>
+      
+          <div class="gw-banner mt-4" 
+               tal:condition='python: checkPermission("Modify portal content", context)'>
+            <div class="defaultBanner">
+              <a title="Ofertes pendents de revisar" 
+                 tal:attributes="href view/get_draft_collection_path">
+                <div class="d-flex flex-column">
+                  <span class="title" i18n:translate="">Pendent offers to review</span>
+                </div>
+                <i class="bi bi-clipboard-check fs-2"></i>
+              </a>
+            </div>
           </div>
+          
         </div>
       </div>
       <div class="col-md-9">

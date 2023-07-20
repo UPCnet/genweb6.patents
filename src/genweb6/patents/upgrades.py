@@ -1,5 +1,4 @@
-#-*- coding: utf-8 -*-
-from plone import api
+# -*- coding: utf-8 -*-
 from Products.CMFPlone.utils import get_installer
 
 import logging

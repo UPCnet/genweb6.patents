@@ -57,7 +57,7 @@ setup(
         'collective.easyform',
         'collective.easyformplugin.createdx',
         'genweb6.theme'
-],
+    ],
     extras_require={
         'test': [
             'plone.app.testing',

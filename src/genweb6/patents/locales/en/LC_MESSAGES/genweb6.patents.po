@@ -1,0 +1,179 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2023-07-19 09:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: genweb6.patents\n"
+
+#: ../content/techoffer/techoffer.pt:47
+#: ../content/techoffer/techoffer.py:71
+msgid "Applications and Target Market"
+msgstr ""
+
+#: ../vocabularies.py:18
+msgid "Applied patent"
+msgstr ""
+
+#: ../vocabularies.py:20
+msgid "Approved patent"
+msgstr ""
+
+#: ../content/techoffer/techoffer.pt:73
+#: ../content/techoffer/techoffer.py:99
+msgid "Business Opportunity"
+msgstr ""
+
+#: ../content/techoffer/techoffer.pt:77
+msgid "Contact"
+msgstr ""
+
+#: ../content/techoffer/techoffer.pt:45
+#: ../content/techoffer/techoffer.py:65
+msgid "Current stage of development"
+msgstr ""
+
+#: ../vocabularies.py:21
+msgid "Denied patent"
+msgstr ""
+
+#: ../content/techoffer/techoffer.py:24
+msgid "Description"
+msgstr ""
+
+#: ../content/techoffer/techoffer.py:82
+msgid "First picture"
+msgstr ""
+
+#: ../content/techoffer/techoffer.py:86
+msgid "First picture caption"
+msgstr ""
+
+#: ../vocabularies.py:23
+msgid "Industrial secret"
+msgstr ""
+
+#: ../content/techoffer/techoffer.pt:43
+#: ../content/techoffer/techoffer.py:59
+msgid "Innovative advantages"
+msgstr ""
+
+#: ../configure.zcml:38
+msgid "Installs the genweb6.patents add-on."
+msgstr ""
+
+#: ../content/techoffer/techoffer.py:76
+msgid "Lead Image"
+msgstr ""
+
+#: ../vocabularies.py:16
+msgid "Not possibility of patent"
+msgstr ""
+
+#: ../vocabularies.py:22
+msgid "Other forms of protection"
+msgstr ""
+
+#: ../vocabularies.py:40
+msgid "Others"
+msgstr ""
+
+#: ../vocabularies.py:19
+msgid "PCT application"
+msgstr ""
+
+#: ../content/techoffer/techoffer.pt:75
+#: ../content/techoffer/techoffer.py:104
+msgid "Patent Status"
+msgstr ""
+
+#: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:43
+msgid "Pendent offers to review"
+msgstr ""
+
+#: ../vocabularies.py:17
+msgid "Pending of protection"
+msgstr ""
+
+#: ../content/techoffer/techoffer.py:31
+msgid "Reference number"
+msgstr ""
+
+#: ../content/techoffer/techoffer.py:94
+msgid "Second image caption"
+msgstr ""
+
+#: ../content/techoffer/techoffer.py:90
+msgid "Second picture"
+msgstr ""
+
+#: ../content/techoffer/techoffer.pt:80
+msgid "See more technologies at"
+msgstr ""
+
+#: ../profiles/default/types/TechOffer.xml
+msgid "Technological Offer"
+msgstr ""
+
+#: ../browser/configure.zcml:19
+msgid "Technological Offer Filter"
+msgstr ""
+
+#: ../content/techoffer/techoffer.py:53
+msgid "Technology"
+msgstr ""
+
+#: ../vocabularies.py:30
+msgid "Technology available to be licensed"
+msgstr ""
+
+#: ../vocabularies.py:35
+msgid "Technology available to be licensed with technical cooperation"
+msgstr ""
+
+#: ../content/techoffer/techoffer.pt:39
+#: ../content/techoffer/techoffer.py:47
+msgid "The Challenge"
+msgstr ""
+
+#: ../content/techoffer/techoffer.pt:41
+msgid "The Technology"
+msgstr ""
+
+#: ../content/techoffer/techoffer.py:17
+msgid "Title"
+msgstr ""
+
+#: ../configure.zcml:47
+msgid "Uninstalls the genweb6.patents add-on."
+msgstr ""
+
+#: ../content/techoffer/techoffer.pt:94
+msgid "filed under:"
+msgstr ""
+
+#: ../configure.zcml:38
+msgid "genweb6.patents"
+msgstr ""
+
+#: ../configure.zcml:47
+msgid "genweb6.patents (uninstall)"
+msgstr ""
+
+#. Default: "Tags"
+#: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:29
+msgid "label_tags"
+msgstr ""
+
+#. Default: "Cerca"
+#: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:24
+msgid "search"
+msgstr ""

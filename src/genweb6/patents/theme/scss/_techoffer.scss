@@ -27,7 +27,10 @@ body.portaltype-techoffer {
         #above-content-wrapper, 
         #content-header,
         #back-to-top,
-        #portal-column-one {
+        #portal-column-one,
+        #global_statusmessage,
+        #techoffer-tags-list,
+        .portalMessage {
             display: none !important; 
         }
         
@@ -48,12 +51,13 @@ body.portaltype-techoffer {
         }
 
         h3, h4 {
-            font-size: 16pt !important;
+            font-size: 15pt !important;
             margin-bottom: 0.5rem !important;
         }
 
         .box, #content-core, #main-container, .row-fluid [class*="span"]{
             margin-bottom: 0px !important;
+            padding-bottom: 0px !important;
         }
 
         .print-only {

@@ -1,91 +1,112 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xml:lang="en"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="genweb6.patents">
+    <head>
+        <metal:block fill-slot="top_slot"
+                     tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                                 disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
+    </head>
+    <body>
+        <metal:content-core fill-slot="main">
+            <header>
+                <img tal:attributes="src string:${context/absolute_url}/@@gw-logo"
+                    class="print-only" id='head-upc-logo' />
+                <h1 tal:content="context/title"></h1>
+            </header>
+            <metal:block define-macro="content-core">
+                <div id="content-core">
+                    <p>
+                        <strong>
+                            <span tal:content='context/description'></span> Ref. <span
+                                tal:content="context/ref_num"></span>
+                        </strong>
+                    </p>
 
-      lang="en"
-
-      metal:use-macro="context/main_template/macros/master"
-
-      i18n:domain="ploneconf.site">
-
-      <body>
-
-<metal:content-core fill-slot="main">
-<header>
-    <img tal:attributes="src string:${context/absolute_url}/@@gw-logo" class="print-only" id='head-upc-logo'  />
-    <h1 tal:content="context/title"></h1>
-</header>
-<metal:block define-macro="content-core">
-<div id="content-core">
+                    <figure tal:define="scale_func context/@@images;"
+                        tal:condition="python: bool(context.image)">
+                        <img
+                            tal:replace="structure python: scale_func.scale('image', scale='huge', direction='up').tag()" />
+                    </figure>
 
 
-    <p>
-    <strong>
-        <span tal:content='context/description'></span>
-        Ref. <span tal:content="context/ref_num"></span>
-    </strong>
-    </p>
-   
-    <figure tal:define="scale_func context/@@images;"
-            tal:condition="python: bool(context.image)">
-        <img tal:replace="structure python: scale_func.scale('image', scale='huge', direction='up').tag()" />
-    </figure>
-
-
-    
-    <div id="parent-fieldname-text">
-        <div class="row-fluid">
-            <div class="span8">
-                <div class="box">
-                    <h3>The Challenge</h3>
-                    <tal:block tal:replace="structure context/solution/output"></tal:block>
-                    <h3>The Technology</h3>
-                    <tal:block tal:replace="structure context/technology/output"></tal:block>
-                    <h3>Innovative advantagess</h3>
-                    <tal:block tal:replace="structure context/advantages/output"></tal:block>
-                    <h3>Current stage of development</h3>
-                    <tal:block tal:replace="structure context/dev_stage/output"></tal:block>
-                    <h3>Applications and Target Market</h3>
-                    <div class='last-richtext-paragraph'>
-                        <tal:block tal:replace="structure context/applications/output"></tal:block>
-                    </div>
-                </div>
-            </div>
-            <div 
-                tal:define="scale_func context/@@images;
+                    <div id="parent-fieldname-text">
+                        <div class="row-fluid">
+                            <div class="span8">
+                                <div class="box">
+                                    <h3 i18n:translate="">The Challenge</h3>
+                                    <tal:block tal:replace="structure context/challenge/output"></tal:block>
+                                    <h3 i18n:translate="">The Technology</h3>
+                                    <tal:block tal:replace="structure context/technology/output"></tal:block>
+                                    <h3 i18n:translate="">Innovative advantages</h3>
+                                    <tal:block tal:replace="structure context/advantages/output"></tal:block>
+                                    <h3 i18n:translate="">Current stage of development</h3>
+                                    <tal:block tal:replace="structure context/dev_stage/output"></tal:block>
+                                    <h3 i18n:translate="">Applications and Target Market</h3>
+                                    <div class='last-richtext-paragraph'>
+                                        <tal:block
+                                            tal:replace="structure context/applications/output"></tal:block>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                tal:define="scale_func context/@@images;
                             image1_large python: getattr(context.aq_explicit, 'image1', False) and scale_func.scale('image1', scale='large', direction='up');
                             image2_large python: getattr(context.aq_explicit, 'image2', False) and scale_func.scale('image2', scale='large', direction='up')"
-                class="span4">
-    
-                <tal:img1block tal:condition="python: bool(image1_large)">
-                    <img tal:replace="structure python: image1_large.tag()"/>
-                    <p tal:define="caption context/caption1 | nothing"
-                       tal:condition="python: bool(caption)" 
-                       class="card p-3 text-bg-light mb-4" tal:content="caption"></p>
-                </tal:img1block>
+                                class="span4">
 
-                <tal:img2block tal:condition="python: bool(image2_large)">
-                    <img tal:replace="structure python: image2_large.tag()"/>
-                    <p tal:define="caption context/caption2 | nothing"
-                        tal:condition="python: bool(caption)" 
-                        class="card p-3 text-bg-light mb-4" tal:content="caption"></p>
-                </tal:img2block>
-                <h4>Business Opportunity</h4>
-                <p tal:content="context/opportunity"></p>
-                <h4>Patent Status</h4>
-                <p tal:content="context/patent_status"></p>
-                <h4>Contact</h4>
-                <p>Servei de Gestió de la Innovació<br/>
-                T. + 34 93 413 623<br/>
-                gestio.innovacio@upc.edu</p>
-                <h4>See more technologies at</h4>
-                <a tal:define="patents_link string:https://www.upc.edu/innovacio/ca/patents/oferta-tecnologica"
-                tal:attributes="href patents_link" tal:content="patents_link"></a>
-            </div>
-        </div>
-    </div>
-</div>
-</metal:block>
-</metal:content-core>
+                                <tal:img1block tal:condition="python: bool(image1_large)">
+                                    <img tal:replace="structure python: image1_large.tag()" />
+                                    <p tal:define="caption context/caption1 | nothing"
+                                        tal:condition="python: bool(caption)"
+                                        class="card p-3 text-bg-light mb-4" tal:content="caption"></p>
+                                </tal:img1block>
 
-</body>
+                                <tal:img2block tal:condition="python: bool(image2_large)">
+                                    <img tal:replace="structure python: image2_large.tag()" />
+                                    <p tal:define="caption context/caption2 | nothing"
+                                        tal:condition="python: bool(caption)"
+                                        class="card p-3 text-bg-light mb-4" tal:content="caption"></p>
+                                </tal:img2block>
+                                <h4 i18n:translate="">Business Opportunity</h4>
+                                <p i18n:translate="" tal:content="context/opportunity"></p>
+                                <h4 i18n:translate="">Patent Status</h4>
+                                <p i18n:translate="" tal:content="context/patent_status"></p>
+                                <h4 i18n:translate="">Contact</h4>
+                                <p>Servei de Gestió de la Innovació<br /> T. + 34 93 413 623<br />
+                                    gestio.innovacio@upc.edu</p>
+                                <h4 i18n:translate="">See more technologies at</h4>
+                                <a
+                                    tal:define="patents_link string:https://www.upc.edu/innovacio/ca/patents/oferta-tecnologica"
+                                    tal:attributes="href patents_link" tal:content="patents_link"></a>
+                                <div
+                                tal:define="categories context/Subject|nothing;"
+                                tal:condition="categories"
+                                class="card row-fluid mt-3">
+                                <div class="card-body p-2" id='techoffer-tags-list'>
+                                    <i class="bi bi-tag"></i>
+                                    <tal:filedunder i18n:translate="">filed under:</tal:filedunder>
+                                    <span tal:repeat="category categories">
+                                        <a class="link-category"
+                                            href=""
+                                            rel="tag"
+                                            tal:content="category"
+                                            tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/search?Subject%3Alist=${category};">
+                                            Category
+                                        </a>
+                                        <tal:separator condition="not: repeat/category/end">,</tal:separator>
+                                    </span>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </metal:block>
+        </metal:content-core>
+    </body>
 
 </html>

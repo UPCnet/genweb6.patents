@@ -6,7 +6,24 @@
 # locales/[language]/LC_MESSAGES/genweb6.patents.po
 # (e.g. locales/de/LC_MESSAGES/genweb6.patents.po)
 
-domain=genweb6.patents
 
-i18ndude rebuild-pot --pot $domain.pot --create $domain ../
-i18ndude sync --pot $domain.pot */LC_MESSAGES/$domain.po
+
+dom=
+while getopts "d:" opt; do
+    case "$opt" in
+        d)
+            dom="$OPTARG";;
+        ?)
+           exit 1;;
+    esac
+done
+
+
+if [[ -z "$dom" ]]; then
+    dom="genweb6.patents"
+fi
+
+echo $dom
+
+i18ndude rebuild-pot --pot $dom.pot --create $dom ../
+i18ndude sync --pot $dom.pot */LC_MESSAGES/$dom.po

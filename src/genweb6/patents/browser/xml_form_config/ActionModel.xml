@@ -1,5 +1,38 @@
 <model xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns:easyform="http://namespaces.plone.org/supermodel/easyform" xmlns="http://namespaces.plone.org/supermodel/schema">
   <schema>
+    <field name="send_mail" type="collective.easyform.actions.Mailer">
+      <body_footer/>
+      <body_post/>
+      <body_pre/>
+      <body_pt>&lt;html xmlns="http://www.w3.org/1999/xhtml"&#13;
+      xmlns:tal="http://xml.zope.org/namespaces/tal"&#13;
+&gt;&#13;
+  &lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&#13;
+  &lt;body&gt;&#13;
+    &lt;p tal:content="structure body_pre | nothing"&gt;&lt;/p&gt;&#13;
+    &lt;dl&gt;&#13;
+      &lt;tal:block repeat="field data | nothing"&gt;&#13;
+        &lt;dt tal:content="python:fields[field]"&gt;&lt;/dt&gt;&#13;
+        &lt;dd tal:content="structure python:widgets[field]"&gt;&lt;/dd&gt;&#13;
+      &lt;/tal:block&gt;&#13;
+    &lt;/dl&gt;&#13;
+    &lt;p tal:content="structure body_post | nothing"&gt;&lt;/p&gt;&#13;
+    &lt;p tal:content="structure body_footer | nothing"&gt;&lt;/p&gt;&#13;
+  &lt;/body&gt;&#13;
+&lt;/html&gt;</body_pt>
+      <msg_subject>Nova oferta tecnol&#242;gica per revisar</msg_subject>
+      <recipient_email>gestio.innovacio@upc.edu</recipient_email>
+      <recipient_name>Servei de Gesti&#243; de la Innovaci&#243;</recipient_name>
+      <required>False</required>
+      <showAll>False</showAll>
+      <showFields>
+        <element>title</element>
+        <element>description</element>
+        <element>ref_num</element>
+      </showFields>
+      <subject_field>title</subject_field>
+      <title>Send Mail</title>
+    </field>
     <field name="createdx" type="collective.easyformplugin.createdx.actions.CreateDX">
       <content_type>TechOffer</content_type>
       <location>/ca/patents</location>
@@ -7,8 +40,8 @@
         <element>title title</element>
         <element>description description</element>
         <element>ref_num ref_num</element>
-        <element>category category</element>
-        <element>solution solution</element>
+        <element>category subject</element>
+        <element>challenge challenge</element>
         <element>technology technology</element>
         <element>advantages advantages</element>
         <element>dev_stage dev_stage</element>
