@@ -2,110 +2,89 @@
    If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
    This text does not appear on PyPI or github. It is a comment.
 
-.. image:: https://github.com/collective/genweb6.patents/actions/workflows/plone-package.yml/badge.svg
-    :target: https://github.com/collective/genweb6.patents/actions/workflows/plone-package.yml
+.. image:: https://github.com/upcnet/genweb6.patents/actions/workflows/ci.yml/badge.svg
+    :target: https://github.com/upcnet/genweb6.patents/actions/workflows/ci.yml
 
-.. image:: https://coveralls.io/repos/github/collective/genweb6.patents/badge.svg?branch=main
-    :target: https://coveralls.io/github/collective/genweb6.patents?branch=main
-    :alt: Coveralls
-
-.. image:: https://codecov.io/gh/collective/genweb6.patents/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/collective/genweb6.patents
-
-.. image:: https://img.shields.io/pypi/v/genweb6.patents.svg
-    :target: https://pypi.python.org/pypi/genweb6.patents/
-    :alt: Latest Version
-
-.. image:: https://img.shields.io/pypi/status/genweb6.patents.svg
-    :target: https://pypi.python.org/pypi/genweb6.patents
-    :alt: Egg Status
-
-.. image:: https://img.shields.io/pypi/pyversions/genweb6.patents.svg?style=plastic   :alt: Supported - Python Versions
-
-.. image:: https://img.shields.io/pypi/l/genweb6.patents.svg
-    :target: https://pypi.python.org/pypi/genweb6.patents/
-    :alt: License
-
-
-===============
+###############
 genweb6.patents
-===============
+###############
 
-Genweb 6 package for managing technology offers
+Paquete de Genweb6 para gestionar la oferta tecnológica
 
-Features
---------
+- python 3.11
+- Plone 6.0 classic
 
-- Can be bullet points
+Instalación
+===========
 
+Instala el paquete ``genweb6.patents`` añadiéndolo en los eggs 
+de la sección ``plone.recipe.zope2instance``::
 
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
-
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
-
-
-Installation
-------------
-
-Install genweb6.patents by adding it to your buildout::
-
-    [buildout]
-
-    ...
-
+    [instance]
+    recipe = plone.recipe.zope2instance
     eggs =
+        Plone
+        …
         genweb6.patents
 
+Para instalarlo en modo desarollo, hay que además añadirlo a ``sources`` 
+y especificar la configuración en la sección ``buildout``::
+  
+    [buildout]
+        …
+        develop = 
+        developeggs +=
+            …
+            genweb6.patents
 
-and then running ``bin/buildout``
+        extensions = mr.developer
+        always-checkout = false
+        auto-checkout = ${buildout:developeggs}
+        …
 
-
-Authors
--------
-
-Provided by awesome people ;)
-
-
-Contributors
-------------
-
-Put your name here, you deserve it!
-
-- ?
-
-
-Contribute
-----------
-
-- Issue Tracker: https://github.com/collective/genweb6.patents/issues
-- Source Code: https://github.com/collective/genweb6.patents
-- Documentation: https://docs.plone.org/foo/bar
+    [sources]
+        genweb6.patents = git https://github.com/UPCnet/genweb6.patents.git branch=master
 
 
-Support
--------
+Finalmente hacer el buildout del paquete ``bin/buildout`` o boostrap ``bash bootsrap.sh``
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
+Documentación
+=============
+Tipo de contenido: Oferta Tecnológica
+-------------------------------------
+Este nuevo tipo de contenido solo se puede añadir en las caretas.
+Se construye a partir de los siguientes campos:
+
+- ``Título``: el título de la oferta tecnológica.
+- ``Descripción [opcional]``: la descripción de la oferta tecnológica.
+- ``Número de referencia``: el número de referencia de la patente.
+- ``El Reto``: una breve explicación del problema que se quiere resolver.
+- ``Tecnología``: una breve explicación de la tecnología involucrada en la solución del reto.
+- ``Ventajas innovadoras``: una breve explicación de las ventajas que puede aportar la solución.
+- ``Fase actual del desarrollo``: una breve explicación del estado actual del desarrollo de la solución
+- ``Aplicaciones i mercado objetivo``: una breve explicación del mercado objetivo  
+- ``Imagen principal [opcional]``: La imagen principal de la oferta, sale en el listado de las patentes.
+- ``Primera imagen [opcional]``: Una imagen relevante para la oferta 
+    - Es recomendable usar una imagen de dimensiones con una relación similar a 13x3 (por ejemplo 1300*300)
+- ``Comentario de la primera imagen [opcional]``: Un comentario que saldrá justo debajo de la primera imagen
+- ``Segunda imagen [opcional]``: Una segunda imagen que mostrará después de la primera 
+- ``Comentario de la segunda imagen [opcional]``: Un comentario que saldrá justo debajo de la primera imagen
+- ``Oportunidades de negocio``: A seleccionar entre las siguientes opciones:
+    -  Tecnología disponible a ser licenciada
+    -  Tecnología disponible para ser licenciada con cooperación técnica
+    -  Otros
+- ``Estado de la patente``: A seleccionar entre las siguientes opciones:
+    -  No posibilidad de patente
+    -  Pendiente de protección
+    -  Patente solicitada
+    -  PCT solicitada
+    -  Patente aprobada
+    -  Patente denegada
+    -  Otras formas de protección
+    -  Secreto industrial
 
 
-License
--------
+En la siguiente imagen se muestra cómo se visualiza el contenido. **Nota**: los estilos de los valores han sido exagerados para que contraste con el contenido estático.
 
-The project is licensed under the GPLv2.
+.. image:: readme_files/Muestra_to.png
+
