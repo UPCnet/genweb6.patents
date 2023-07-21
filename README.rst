@@ -48,6 +48,9 @@ y especificar la configuración en la sección ``buildout``::
 
 Finalmente hacer el buildout del paquete ``bin/buildout`` o boostrap ``bash bootsrap.sh``
 
+Una vez instalado el paquete en la página de Plone es recomendable llamar la vista ``/configure_techoffer`` 
+en la ruta de la página. (La vista está explicada más abajo)
+
 Documentación
 =============
 Tipo de contenido: Oferta Tecnológica
@@ -88,3 +91,26 @@ En la siguiente imagen se muestra cómo se visualiza el contenido. **Nota**: los
 
 .. image:: readme_files/Muestra_to.png
 
+Vista: Filtro de las ofertas tecnológicas (/techoffer_filter)
+-------------------------------------------------------------
+Muestra un listado de todas las ofertas tecnológicas.
+Proporciona también un campo de búsqueda y un filtro por etiquetas.
+
+- El campo de búsqueda busca palabras en todo el contenido (título, descripción, reto, tecnología, etc...)
+- Las ofertas que se filtran han de tener TODAS las etiquetas seleccionadas
+  
+.. image:: readme_files/Muestra_to_filter.png
+
+
+Vista: Configuración de oferta tecnológica (/configure_techoffer)
+-----------------------------------------------------------------
+Crea la estructura de patentes en la página.
+
+- Se crea la carpeta ``patents``
+- Se crea la carpeta ``patents/ofreta-tecnologica``
+- Se crea el formulario ``patents/oferta-tecnologica/create-tecnological-offer``
+    - Este formulario replica los campos del tipo de contenido "Oferta Tecnológica"
+      y, al enviar, crea una nueva oferta dentro de la carpeta ``patents/ofreta-tecnologica``
+- Se crea la colección ``patents/ofreta-tecnologica/technological-offers-to-review``
+    - Esta colección recopila todas las ofertas en estado "Borrador"
+   
