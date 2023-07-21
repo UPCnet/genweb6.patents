@@ -25,7 +25,6 @@ class Genweb6PatentsLayer(PloneSandboxLayer):
         import collective.easyformplugin.createdx
         self.loadZCML(package=collective.easyformplugin.createdx)
         self.loadZCML(package=genweb6.patents)
-        
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'genweb6.patents:default')

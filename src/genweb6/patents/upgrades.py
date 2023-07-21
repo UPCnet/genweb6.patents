@@ -10,3 +10,4 @@ def upgrade_by_reinstall(context):
     qi = get_installer(context)
     qi.uninstall_product("genweb6.patents")
     qi.install_product("genweb6.patents")
+    return True

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from pathlib import Path
 from plone import api
 from Products.CMFCore.utils import getToolByName
@@ -109,13 +110,13 @@ Configura la pàgina de patents:
         with open(xml_config_path / 'ActionModel.xml', 'r') as f:
             actions_model = f.read()
 
-        patents = api.content.get('/ca/patents-py')
+        patents = api.content.get('/ca/nova-patents')
         if not patents:
             patents = api.content.create(
-              type='Folder',
-              id='patents-py',
-              title='Patents but with python',
-              container=api.content.get('/ca')
+                type='Folder',
+                id='nova-patents',
+                title='Patents (Nova versió)',
+                container=api.content.get('/ca')
             )
 
         techoffer = patents.get("oferta-tecnologica")
@@ -123,7 +124,7 @@ Configura la pàgina de patents:
             techoffer = api.content.create(
                 type='Folder',
                 id='oferta-tecnologica',
-                title='Oferta Tecnològica/Technological Offer',
+                title='Oferta Tecnològica/Technological Offer (Nova versió)',
                 container=patents,
                 subject=tags
             )
