@@ -87,7 +87,9 @@ Se construye a partir de los siguientes campos:
     -  Secreto industrial
 
 
-En la siguiente imagen se muestra cómo se visualiza el contenido. **Nota**: los estilos de los valores han sido exagerados para que contraste con el contenido estático.
+En la siguiente imagen se muestra cómo se visualiza el contenido. **Nota**: los estilos de los valores han 
+sido exagerados para que contraste con el contenido estático, para así visualizar mejor la distribución de los campos
+en la página.
 
 .. image:: readme_files/Muestra_to.png
 

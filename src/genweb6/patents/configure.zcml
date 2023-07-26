@@ -20,6 +20,7 @@
 
   <include file="permissions.zcml" />
   <include file="upgrades.zcml" />
+  <include file="patches.zcml" />
 
   <browser:page
      name="view"

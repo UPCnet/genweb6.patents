@@ -30,7 +30,6 @@
       <title>Tecnologia/Technology</title>
     </field>
     <field name="advantages" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
-      <default>&lt;p&gt;Hola&lt;/p&gt;</default>
       <description/>
       <max_length>1000</max_length>
       <title>Avantatges innovadors/Innovative advantages</title>
