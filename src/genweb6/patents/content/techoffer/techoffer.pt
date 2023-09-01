@@ -14,6 +14,23 @@
             <header>
                 <img tal:attributes="src string:${context/absolute_url}/@@gw-logo"
                     class="print-only" id='head-upc-logo' />
+                    <div id="social_tags">
+                        <a target="_blank" tal:attributes="href python: f'https://twitter.com/intent/tweet?url={context.absolute_url()}&amp;text=Equip humà'" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                        </a>
+                        <a target="_blank" tal:attributes="href python: f'https://www.facebook.com/sharer/sharer.php?u={context.absolute_url()}'" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                        </a>
+                        <a target="_blank" tal:attributes="href python: f'https://wa.me/?text=Equip humà {context.absolute_url()}'" title="Whatsapp">
+                          <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" id="copy-universal-link" tal:attributes="data-url python:context.absolute_url()" aria-label="Copiat!" data-bs-title="Copiat!" data-bs-original-title="Copiar enllaç">
+                          <i class="fa-regular fa-copy"></i>
+                        </a>
+                        <a href="javascript:window.print()" data-bs-toggle="tooltip" id="print-page" title="Print">
+                            <i class="bi bi-printer"></i>
+                        </a>
+                    </div>
                 <h1 tal:content="context/title"></h1>
             </header>
             <metal:block define-macro="content-core">
