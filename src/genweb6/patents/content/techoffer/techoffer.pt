@@ -88,7 +88,7 @@
                                         class="card p-3 text-bg-light mb-4" tal:content="caption"></p>
                                 </tal:img2block>
                                 <h4 i18n:translate="">Business Opportunity</h4>
-                                <p i18n:translate="" tal:content="context/opportunity"></p>
+                                <p i18n:translate="" tal:content="python: context.opportunity if context.opportunity != 'Others' else context.other_opportunity"></p>
                                 <h4 i18n:translate="">Patent Status</h4>
                                 <p i18n:translate="" tal:content="context/patent_status"></p>
                                 <h4 i18n:translate="">Contact</h4>

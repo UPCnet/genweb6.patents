@@ -8,7 +8,7 @@ from plone.dexterity.content import Item
 from plone.namedfile import field as namedfile
 from plone.supermodel import model
 from zope import schema
-from zope.interface import implementer
+from zope.interface import implementer, invariant, Invalid  # noqa F401
 
 
 class ITechOffer(model.Schema):
@@ -32,15 +32,6 @@ class ITechOffer(model.Schema):
         description=u"",
         required=True,
     )
-
-    # category = schema.Choice(
-    #     title=_(u"Category"),
-    #     values=[
-    #         'a',
-    #         'b',
-    #         'c'
-    #     ]
-    # )
 
     textindexer.searchable('challenge')
     challenge = RichText(
@@ -99,11 +90,23 @@ class ITechOffer(model.Schema):
         title=_(u"Business Opportunity"),
         vocabulary="genweb.patents.vocabularies.business_opportunity"
     )
+    other_opportunity = schema.TextLine(
+        title=_(u"Specify Business Opportunity"),
+        description=_(u"Fill this field if you selected 'Others' for 'Business Opportunity'"),
+        required=False
+    )
 
     patent_status = schema.Choice(
         title=_(u"Patent Status"),
         vocabulary="genweb.patents.vocabularies.patent_status"
     )
+
+    # XXX: Queremos validar esta condición?
+    # @invariant
+    # def other_opportunityInvariant(data):
+    #     if not bool(data.other_opportunity) and data.opportunity == "Others":
+    #         raise Invalid(_("'Specify business opportunity' field required when 'Others' is selected" +
+    #                         " for 'Business Opportunity'"))
 
 
 @implementer(ITechOffer)

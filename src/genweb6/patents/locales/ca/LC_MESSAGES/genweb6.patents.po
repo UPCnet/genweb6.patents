@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-07-19 09:57+0000\n"
+"POT-Creation-Date: 2023-09-04 11:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,34 +15,34 @@ msgstr ""
 "Domain: genweb6.patents\n"
 "Language: ca\n"
 
-#: ../content/techoffer/techoffer.pt:47
-#: ../content/techoffer/techoffer.py:71
+#: ../content/techoffer/techoffer.pt:64
+#: ../content/techoffer/techoffer.py:62
 msgid "Applications and Target Market"
 msgstr "Aplicacions i mercat objectiu/Applications and Target Market"
 
-#: ../vocabularies.py:18
+#: ../vocabularies.py:14
 msgid "Applied patent"
 msgstr "Patent sol·licitada/Applied patent"
 
-#: ../vocabularies.py:20
+#: ../vocabularies.py:16
 msgid "Approved patent"
 msgstr "Patent aprovada/Approved patent"
 
-#: ../content/techoffer/techoffer.pt:73
-#: ../content/techoffer/techoffer.py:99
+#: ../content/techoffer/techoffer.pt:90
+#: ../content/techoffer/techoffer.py:90
 msgid "Business Opportunity"
 msgstr "Oportunitats de negoci/Business Opportunity"
 
-#: ../content/techoffer/techoffer.pt:77
+#: ../content/techoffer/techoffer.pt:94
 msgid "Contact"
 msgstr "Contacte/Contact"
 
-#: ../content/techoffer/techoffer.pt:45
-#: ../content/techoffer/techoffer.py:65
+#: ../content/techoffer/techoffer.pt:62
+#: ../content/techoffer/techoffer.py:56
 msgid "Current stage of development"
 msgstr "Fase actual de desenvolupament/Current stage of development"
 
-#: ../vocabularies.py:21
+#: ../vocabularies.py:17
 msgid "Denied patent"
 msgstr "Patent denegada/Denied patent"
 
@@ -50,57 +50,61 @@ msgstr "Patent denegada/Denied patent"
 msgid "Description"
 msgstr "Descripció/Description"
 
-#: ../content/techoffer/techoffer.py:82
+#: ../content/techoffer/techoffer.py:95
+msgid "Fill this field if you selected 'Others' for 'Business Opportunity'"
+msgstr "Omple aquest camp si has seleccionat 'Altres' per 'Oportunitats de negoci'/Fill this field if you selected 'Others' for 'Business Opportunity'"
+
+#: ../content/techoffer/techoffer.py:73
 msgid "First picture"
 msgstr "Primera imatge/First picture"
 
-#: ../content/techoffer/techoffer.py:86
+#: ../content/techoffer/techoffer.py:77
 msgid "First picture caption"
 msgstr "Comentari de la primera imatge/First picture caption"
 
-#: ../vocabularies.py:23
+#: ../vocabularies.py:19
 msgid "Industrial secret"
 msgstr "Secret industrial/Industrial secret"
 
-#: ../content/techoffer/techoffer.pt:43
-#: ../content/techoffer/techoffer.py:59
+#: ../content/techoffer/techoffer.pt:60
+#: ../content/techoffer/techoffer.py:50
 msgid "Innovative advantages"
 msgstr "Avantatges innovadors/Innovative advantages"
 
-#: ../configure.zcml:38
+#: ../configure.zcml:39
 msgid "Installs the genweb6.patents add-on."
 msgstr "Instal·lar paquet genweb6.patents/Installs the genweb6.patents add-on."
 
-#: ../content/techoffer/techoffer.py:76
+#: ../content/techoffer/techoffer.py:67
 msgid "Lead Image"
 msgstr "Imatge principal/Lead Image"
 
-#: ../vocabularies.py:16
+#: ../vocabularies.py:12
 msgid "Not possibility of patent"
 msgstr "No possibilitat de patent/Not possibility of patent"
 
-#: ../vocabularies.py:22
+#: ../vocabularies.py:18
 msgid "Other forms of protection"
 msgstr "Altres formes de protecció/Other forms of protection"
 
-#: ../vocabularies.py:40
+#: ../vocabularies.py:36
 msgid "Others"
 msgstr "Altres/Others"
 
-#: ../vocabularies.py:19
+#: ../vocabularies.py:15
 msgid "PCT application"
 msgstr "PCT sol·licitada/PCT application"
 
-#: ../content/techoffer/techoffer.pt:75
-#: ../content/techoffer/techoffer.py:104
+#: ../content/techoffer/techoffer.pt:92
+#: ../content/techoffer/techoffer.py:100
 msgid "Patent Status"
 msgstr "Estat de la patent/Patent Status"
 
-#: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:43
+#: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:44
 msgid "Pendent offers to review"
 msgstr "Ofertes pendents de revisar"
 
-#: ../vocabularies.py:17
+#: ../vocabularies.py:13
 msgid "Pending of protection"
 msgstr "Pendent de protecció/Pending of protection"
 
@@ -108,17 +112,21 @@ msgstr "Pendent de protecció/Pending of protection"
 msgid "Reference number"
 msgstr "Número de referència/Reference number"
 
-#: ../content/techoffer/techoffer.py:94
+#: ../content/techoffer/techoffer.py:85
 msgid "Second image caption"
 msgstr "Comentari de la segona imatge/Second image caption"
 
-#: ../content/techoffer/techoffer.py:90
+#: ../content/techoffer/techoffer.py:81
 msgid "Second picture"
 msgstr "Segona imatge/Second picture"
 
-#: ../content/techoffer/techoffer.pt:80
+#: ../content/techoffer/techoffer.pt:97
 msgid "See more technologies at"
 msgstr "Veu més tecnologies a/See more technologies at"
+
+#: ../content/techoffer/techoffer.py:94
+msgid "Specify Business Opportunity"
+msgstr "Especifca la Oportunitat de negoci/Specify Business Opportunity"
 
 #: ../profiles/default/types/TechOffer.xml
 msgid "Technological Offer"
@@ -128,24 +136,24 @@ msgstr "Oferta Tecnològica"
 msgid "Technological Offer Filter"
 msgstr "Filtre d'Oferta Tecnológica"
 
-#: ../content/techoffer/techoffer.py:53
+#: ../content/techoffer/techoffer.py:44
 msgid "Technology"
 msgstr "Tecnologia/Technology"
 
-#: ../vocabularies.py:30
+#: ../vocabularies.py:26
 msgid "Technology available to be licensed"
 msgstr "Tecnologia disponible per a ser llicenciada/Technology available to be licensed"
 
-#: ../vocabularies.py:35
+#: ../vocabularies.py:31
 msgid "Technology available to be licensed with technical cooperation"
 msgstr "Tecnologia disponible per a ser llicenciada amb cooperació tècnica/Technology available to be licensed with technical cooperation"
 
-#: ../content/techoffer/techoffer.pt:39
-#: ../content/techoffer/techoffer.py:47
+#: ../content/techoffer/techoffer.pt:56
+#: ../content/techoffer/techoffer.py:38
 msgid "The Challenge"
 msgstr "El Repte/The Challenge"
 
-#: ../content/techoffer/techoffer.pt:41
+#: ../content/techoffer/techoffer.pt:58
 msgid "The Technology"
 msgstr "La Tecnologia/The Technology"
 
@@ -153,28 +161,28 @@ msgstr "La Tecnologia/The Technology"
 msgid "Title"
 msgstr "Títol/Title"
 
-#: ../configure.zcml:47
+#: ../configure.zcml:48
 msgid "Uninstalls the genweb6.patents add-on."
 msgstr "Desinstal·lar paquet genweb6.patents"
 
-#: ../content/techoffer/techoffer.pt:94
+#: ../content/techoffer/techoffer.pt:107
 msgid "filed under:"
 msgstr "arxivat sota:"
 
-#: ../configure.zcml:38
+#: ../configure.zcml:39
 msgid "genweb6.patents"
 msgstr ""
 
-#: ../configure.zcml:47
+#: ../configure.zcml:48
 msgid "genweb6.patents (uninstall)"
 msgstr ""
 
 #. Default: "Tags"
-#: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:29
+#: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:30
 msgid "label_tags"
 msgstr "Etiquetes"
 
 #. Default: "Cerca"
-#: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:24
+#: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:25
 msgid "search"
 msgstr "Filtre"

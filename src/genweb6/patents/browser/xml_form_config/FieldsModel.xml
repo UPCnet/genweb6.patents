@@ -9,12 +9,13 @@
       <required>False</required>
       <title>Descripci&#243;/Description</title>
     </field>
-    <field name="ref_num" type="zope.schema.TextLine">
+    <field name="ref_num" type="zope.schema.TextLine" easyform:serverSide="False" easyform:THidden="True">
+      <default>-</default>
       <description/>
       <title>N&#250;mero de refer&#232;ncia/Reference number</title>
     </field>
     <field name="category" type="zope.schema.Choice" easyform:serverSide="False" easyform:THidden="False">
-      <default>Buenas</default>
+      <default>Aerospace</default>
       <description/>
       <title>Categoria/Category</title>
       <vocabulary>plone.app.vocabularies.Keywords</vocabulary>
@@ -44,11 +45,6 @@
       <max_length>400</max_length>
       <title>Aplicacions i mercat objectiu/Applications and Target Market</title>
     </field>
-    <field name="image" type="plone.namedfile.field.NamedBlobImage">
-      <description/>
-      <required>False</required>
-      <title>Imatge principal/Lead Image</title>
-    </field>
     <field name="image1" type="plone.namedfile.field.NamedBlobImage">
       <description/>
       <required>False</required>
@@ -74,6 +70,11 @@
       <description/>
       <title>Oportunitats de negoci/Business Opportunity</title>
       <vocabulary>genweb.patents.vocabularies.business_opportunity</vocabulary>
+    </field>
+    <field name="other_opportunity" type="zope.schema.TextLine" easyform:depends_on="condition: form.widgets.opportunity:list=Others; transition: slide; effect-duration: 500" easyform:serverSide="False" easyform:THidden="False">
+      <description>Omple aquest camp si has seleccionat 'Altres' per 'Oportunitats de negoci'/Fill this field if you selected 'Others' for 'Business Opportunity'</description>
+      <required>False</required>
+      <title>Especifca la Oportunitat de negoci/Specify Business Opportunity</title>
     </field>
     <field name="patent_status" type="zope.schema.Choice" easyform:serverSide="False" easyform:THidden="False">
       <default>Not possibility of patent</default>

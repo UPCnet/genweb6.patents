@@ -46,12 +46,12 @@
         <element>advantages advantages</element>
         <element>dev_stage dev_stage</element>
         <element>applications applications</element>
-        <element>image image</element>
         <element>image1 image1</element>
         <element>caption1 caption1</element>
         <element>image2 image2</element>
         <element>caption2 caption2</element>
         <element>opportunity opportunity</element>
+        <element>other_opportunity other_opportunity</element>
         <element>patent_status patent_status</element>
       </mappings>
       <title>createdx</title>
