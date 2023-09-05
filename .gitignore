@@ -37,6 +37,7 @@ report.html
 .tox/
 reports/
 venv/
+.sass-cache/
 # excludes
 
 src/*
