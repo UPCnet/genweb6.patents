@@ -104,8 +104,8 @@ class ITechOffer(model.Schema):
     @invariant
     def other_opportunityInvariant(data):
         if not bool(data.other_opportunity) and data.opportunity == "Others":
-            raise Invalid(_("'Specify business opportunity' field required when 'Others' is selected" +
-                            " for 'Business Opportunity'"))
+            raise Invalid(_("'Specify business opportunity' field required when 'Others' is selected"
+                            + " for 'Business Opportunity'"))
 
 
 @implementer(ITechOffer)
