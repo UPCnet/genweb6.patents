@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from genweb6.patents import _
 from plone.app.dexterity import textindexer
 from plone.app.textfield import RichText
@@ -102,11 +101,11 @@ class ITechOffer(model.Schema):
     )
 
     # XXX: Queremos validar esta condición?
-    # @invariant
-    # def other_opportunityInvariant(data):
-    #     if not bool(data.other_opportunity) and data.opportunity == "Others":
-    #         raise Invalid(_("'Specify business opportunity' field required when 'Others' is selected" +
-    #                         " for 'Business Opportunity'"))
+    @invariant
+    def other_opportunityInvariant(data):
+        if not bool(data.other_opportunity) and data.opportunity == "Others":
+            raise Invalid(_("'Specify business opportunity' field required when 'Others' is selected" +
+                            " for 'Business Opportunity'"))
 
 
 @implementer(ITechOffer)

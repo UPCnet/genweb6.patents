@@ -138,7 +138,7 @@ Configura la pàgina de patents:
         easyform = api.content.create(
             type='EasyForm',
             id='create-technological-offer',
-            title='Crear Oferta Tecnològica/Create Technological Offer',
+            title='Crear Oferta Tecnològica (Create Technological Offer)',
             fields_model=fields_model,
             actions_model=actions_model,
             container=techoffer,

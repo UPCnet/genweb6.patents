@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-09-04 11:28+0000\n"
+"POT-Creation-Date: 2023-09-05 07:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,6 +13,10 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: genweb6.patents\n"
+
+#: ../content/techoffer/techoffer.py:108
+msgid "'Specify business opportunity' field required when 'Others' is selected for 'Business Opportunity'"
+msgstr ""
 
 #: ../content/techoffer/techoffer.pt:64
 #: ../content/techoffer/techoffer.py:62
