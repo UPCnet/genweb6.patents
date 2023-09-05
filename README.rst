@@ -76,6 +76,9 @@ Se construye a partir de los siguientes campos:
     -  Tecnología disponible a ser licenciada
     -  Tecnología disponible para ser licenciada con cooperación técnica
     -  Otros
+- ``Especificar oportunidades de negocio``: Otra opción para oportunidades de negocio. 
+    - Si en el campo anterior, "Oportunidades de negocio", se ha escogido "Otros",este campo es obligatorio para rellenar. 
+    - En cualquier otro caso se ignora. 
 - ``Estado de la patente``: A seleccionar entre las siguientes opciones:
     -  No posibilidad de patente
     -  Pendiente de protección
