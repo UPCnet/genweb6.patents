@@ -3,14 +3,14 @@ from genweb6.patents import _
 from plone.app.dexterity import textindexer
 from plone.app.textfield import RichText
 from plone.dexterity.content import Item
+from plone.dexterity.interfaces import IDexteritySchema
 
 from plone.namedfile import field as namedfile
 from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer, invariant, Invalid  # noqa F401
 
-
-class ITechOffer(model.Schema):
+class ITechOffer(model.Schema, IDexteritySchema):
     textindexer.searchable('title')
     title = schema.TextLine(
         title=_(u"Title"),
