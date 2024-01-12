@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='genweb6.patents',
-    version='1.2.dev0',
+    version='1.2',
     description="Genweb 6 package for managing technology offers",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
