@@ -53,12 +53,12 @@
       />
     
   <utility
-      name="genweb.patents.vocabularies.patent_status"
+      name="genweb6.patents.vocabularies.patent_status"
       factory="genweb6.patents.vocabularies.PatentStatus"
       />
     
   <utility
-      name="genweb.patents.vocabularies.business_opportunity"
+      name="genweb6.patents.vocabularies.business_opportunity"
       factory="genweb6.patents.vocabularies.BusinessOpportunity"
       />
 

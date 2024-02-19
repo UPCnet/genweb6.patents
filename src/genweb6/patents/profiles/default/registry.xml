@@ -15,4 +15,36 @@
 
   </records>
 
+  <record name="genweb6.patents.businessOpportunityValues"> 
+    <field type="plone.registry.field.Tuple">
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="genweb6.patents">Business Opportunity Values</title>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="genweb6.patents">A list of possible values for Business Opportunity field on techoffer</description>
+      <value_type type="plone.registry.field.TextLine" />
+    </field>
+    <value>
+      <element>Tecnologia disponible per a ser llicenciada/Technology available to be licensed</element>
+      <element>Tecnologia disponible per a ser llicenciada amb cooperació tècnica/Technology available to be licensed with technical cooperation</element>
+      <element>Cerca de col·laboradors per avançar en el desenvolupament i implementació a mercat/Looking for collaborators to advance in the development and market implementation</element>
+      <!-- <element>Other</element> "Other" es especial y tiene que estar siempre así que se incluirá automáticamente en el vocabulario-->
+    </value>
+  </record>
+
+  <record name="genweb6.patents.patentStatusValues"> 
+    <field type="plone.registry.field.Tuple">
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="genweb6.patents">Intelectual Property Status Values</title>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="genweb6.patents">A list of possible values for Intelectual Property Status field on techoffer</description>
+      <value_type type="plone.registry.field.TextLine" />
+    </field>
+    <value>
+      <element>No possibilitat de patent/Not possibility of patent</element>
+      <element>Pendent de protecció/Pending of protection</element>
+      <element>Patent sol·licitada/Applied patent</element>
+      <element>PCT sol·licitada/PCT application</element>
+      <element>Patent aprovada/Approved patent</element>
+      <element>Patent denegada/Denied patent</element>
+      <element>Altres formes de protecció/Other forms of protection</element>
+      <element>Secret industrial/Industrial secret</element>
+    </value>
+  </record>
+
 </registry>

@@ -42,7 +42,7 @@
                         </strong>
                     </p>
 
-                    <figure tal:define="scale_func context/@@images;"
+                    <figure class='no-print' tal:define="scale_func context/@@images;"
                         tal:condition="python: bool(context.image)">
                         <img
                             tal:replace="structure python: scale_func.scale('image', scale='huge', direction='up').tag()" />
@@ -51,7 +51,7 @@
 
                     <div id="parent-fieldname-text">
                         <div class="row-fluid">
-                            <div class="span8">
+                            <div class="span9">
                                 <div class="box">
                                     <h3 i18n:translate="">The Challenge</h3>
                                     <tal:block tal:replace="structure context/challenge/output"></tal:block>
@@ -72,7 +72,7 @@
                                 tal:define="scale_func context/@@images;
                             image1_large python: getattr(context.aq_explicit, 'image1', False) and scale_func.scale('image1', scale='large', direction='up');
                             image2_large python: getattr(context.aq_explicit, 'image2', False) and scale_func.scale('image2', scale='large', direction='up')"
-                                class="span4">
+                                class="span3">
 
                                 <tal:img1block tal:condition="python: bool(image1_large)">
                                     <img tal:replace="structure python: image1_large.tag()" />
@@ -88,9 +88,9 @@
                                         class="card p-3 text-bg-light mb-4" tal:content="caption"></p>
                                 </tal:img2block>
                                 <h4 i18n:translate="">Business Opportunity</h4>
-                                <p i18n:translate="" tal:content="python: context.opportunity if context.opportunity != 'Others' else context.other_opportunity"></p>
+                                <p tal:content="python: context.opportunity if context.opportunity != 'Others' else context.other_opportunity"></p>
                                 <h4 i18n:translate="">Patent Status</h4>
-                                <p i18n:translate="" tal:content="context/patent_status"></p>
+                                <p tal:content="context/patent_status"></p>
                                 <h4 i18n:translate="">Contact</h4>
                                 <p>Servei de Gestió de la Innovació<br /> T. + 34 93 413 623<br />
                                     gestio.innovacio@upc.edu</p>

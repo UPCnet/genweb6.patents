@@ -9,10 +9,10 @@ body.portaltype-techoffer {
     @media only screen and (max-width: 639px){
         
         .row-fluid [class*="span"] {
-        float: none !important;
-        display: block !important;
-        width: auto !important;
-        margin-left: 0 !important;
+            float: none !important;
+            display: block !important;
+            width: auto !important;
+            margin-left: 0 !important;
         }
 
     }
@@ -20,10 +20,10 @@ body.portaltype-techoffer {
     @media print {
        
         background: white; 
-        font-size: 12pt !important; 
+        font-size: 11px !important; 
         padding:0px !important;
-        
-        
+        line-height: normal !important;
+
         #above-content-wrapper, 
         #content-header,
         #back-to-top,
@@ -31,10 +31,11 @@ body.portaltype-techoffer {
         #global_statusmessage,
         #techoffer-tags-list,
         #social_tags,
-        .portalMessage {
+        .portalMessage,
+        .no-print {
             display: none !important; 
         }
-        
+
         .container {
             margin: 0px !important;
             padding: 0px !important;
@@ -44,27 +45,48 @@ body.portaltype-techoffer {
         a, a:visited {
             color: black !important;
             text-decoration: none !important;
-            
         }
 
         h1 {
             margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            font-size: 16px !important;
         }
 
         h3, h4 {
-            font-size: 15pt !important;
-            margin-bottom: 0.5rem !important;
+            font-size: 12px !important;
+            margin-bottom: 0.2rem !important;
+            margin-top: 0.2rem !important;
+        }   
+
+        #parent-fieldname-text {
+            margin-top: 10px !important;
         }
 
-        .box, #content-core, #main-container, .row-fluid [class*="span"]{
+        #content-core, #main-container, .row-fluid [class*="span"]{
             margin-bottom: 0px !important;
             padding-bottom: 0px !important;
         }
+        
+        .box, header, p {
+            margin-bottom: 0px !important;
+        }
+
+        .box {
+            padding: 5px !important;
+            text-align: justify !important;
+        }
+
+        .card {
+            padding: 2px !important;
+            margin: 0 !important;
+        }
 
         .print-only {
-            display: initial !important;
-            
+            display: initial !important;   
         }
+
+        
 
         #head-upc-logo, img#head-upc-logo{
             margin-bottom: 1rem !important;

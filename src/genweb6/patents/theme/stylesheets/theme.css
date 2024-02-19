@@ -19,8 +19,9 @@ body.portaltype-techoffer .print-only {
   /* line 2, ../scss/_techoffer.scss */
   body.portaltype-techoffer {
     background: white;
-    font-size: 12pt !important;
+    font-size: 11px !important;
     padding: 0px !important;
+    line-height: normal !important;
   }
   /* line 27, ../scss/_techoffer.scss */
   body.portaltype-techoffer #above-content-wrapper,
@@ -30,16 +31,17 @@ body.portaltype-techoffer .print-only {
   body.portaltype-techoffer #global_statusmessage,
   body.portaltype-techoffer #techoffer-tags-list,
   body.portaltype-techoffer #social_tags,
-  body.portaltype-techoffer .portalMessage {
+  body.portaltype-techoffer .portalMessage,
+  body.portaltype-techoffer .no-print {
     display: none !important;
   }
-  /* line 38, ../scss/_techoffer.scss */
+  /* line 39, ../scss/_techoffer.scss */
   body.portaltype-techoffer .container {
     margin: 0px !important;
     padding: 0px !important;
     max-width: 100% !important;
   }
-  /* line 44, ../scss/_techoffer.scss */
+  /* line 45, ../scss/_techoffer.scss */
   body.portaltype-techoffer a, body.portaltype-techoffer a:visited {
     color: black !important;
     text-decoration: none !important;
@@ -47,22 +49,43 @@ body.portaltype-techoffer .print-only {
   /* line 50, ../scss/_techoffer.scss */
   body.portaltype-techoffer h1 {
     margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    font-size: 16px !important;
   }
-  /* line 54, ../scss/_techoffer.scss */
+  /* line 56, ../scss/_techoffer.scss */
   body.portaltype-techoffer h3, body.portaltype-techoffer h4 {
-    font-size: 15pt !important;
-    margin-bottom: 0.5rem !important;
+    font-size: 12px !important;
+    margin-bottom: 0.2rem !important;
+    margin-top: 0.2rem !important;
   }
-  /* line 59, ../scss/_techoffer.scss */
-  body.portaltype-techoffer .box, body.portaltype-techoffer #content-core, body.portaltype-techoffer #main-container, body.portaltype-techoffer .row-fluid [class*="span"] {
+  /* line 62, ../scss/_techoffer.scss */
+  body.portaltype-techoffer #parent-fieldname-text {
+    margin-top: 10px !important;
+  }
+  /* line 66, ../scss/_techoffer.scss */
+  body.portaltype-techoffer #content-core, body.portaltype-techoffer #main-container, body.portaltype-techoffer .row-fluid [class*="span"] {
     margin-bottom: 0px !important;
     padding-bottom: 0px !important;
   }
-  /* line 64, ../scss/_techoffer.scss */
+  /* line 71, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .box, body.portaltype-techoffer header, body.portaltype-techoffer p {
+    margin-bottom: 0px !important;
+  }
+  /* line 75, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .box {
+    padding: 5px !important;
+    text-align: justify !important;
+  }
+  /* line 80, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .card {
+    padding: 2px !important;
+    margin: 0 !important;
+  }
+  /* line 85, ../scss/_techoffer.scss */
   body.portaltype-techoffer .print-only {
     display: initial !important;
   }
-  /* line 69, ../scss/_techoffer.scss */
+  /* line 91, ../scss/_techoffer.scss */
   body.portaltype-techoffer #head-upc-logo, body.portaltype-techoffer img#head-upc-logo {
     margin-bottom: 1rem !important;
     max-width: 250px;

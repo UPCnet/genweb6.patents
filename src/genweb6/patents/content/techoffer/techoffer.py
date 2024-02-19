@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
+import re
 from genweb6.patents import _
+from zope.i18nmessageid.message import MessageFactory
 from plone.app.dexterity import textindexer
 from plone.app.textfield import RichText
 from plone.dexterity.content import Item
@@ -9,6 +11,26 @@ from plone.namedfile import field as namedfile
 from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer, invariant, Invalid  # noqa F401
+
+
+def max_length_validator(max_length):
+    _pl = MessageFactory("plone")
+
+    def validator(value):
+        filtered = re.sub(r'<[^>]*>', '', value.raw)
+        filtered = filtered.replace('\r\n', '').replace('\n', '')
+        if len(filtered) > max_length:
+            raise Invalid(
+                _pl(
+                    "msg_text_too_long",
+                    default="Text is too long. (Maximum ${max} characters.)",
+                    mapping={"max": max_length},
+                )
+            )
+        return True
+
+    return validator
+
 
 class ITechOffer(model.Schema, IDexteritySchema):
     textindexer.searchable('title')
@@ -35,31 +57,36 @@ class ITechOffer(model.Schema, IDexteritySchema):
     textindexer.searchable('challenge')
     challenge = RichText(
         title=_(u"The Challenge"),
-        max_length=800
+        description=_(u"challenge_description"),
+        constraint=max_length_validator(1100)
     )
 
     textindexer.searchable('technology')
     technology = RichText(
         title=_(u"Technology"),
-        max_length=600
+        description=_(u"technology_description"),
+        constraint=max_length_validator(850)
     )
 
     textindexer.searchable('advantages')
     advantages = RichText(
         title=_(u"Innovative advantages"),
-        max_length=1000
+        description=_(u"advantages_description"),
+        constraint=max_length_validator(1100)
     )
 
     textindexer.searchable('dev_stage')
     dev_stage = RichText(
         title=_(u"Current stage of development"),
-        max_length=350
+        description=_(u"dev_stage_description"),
+        constraint=max_length_validator(450)
     )
 
     textindexer.searchable('applications')
     applications = RichText(
         title=_(u"Applications and Target Market"),
-        max_length=400
+        description=_(u"applications_description"),
+        constraint=max_length_validator(400)
     )
 
     image = namedfile.NamedBlobImage(
@@ -87,7 +114,7 @@ class ITechOffer(model.Schema, IDexteritySchema):
 
     opportunity = schema.Choice(
         title=_(u"Business Opportunity"),
-        vocabulary="genweb.patents.vocabularies.business_opportunity"
+        vocabulary="genweb6.patents.vocabularies.business_opportunity"
     )
     other_opportunity = schema.TextLine(
         title=_(u"Specify Business Opportunity"),
@@ -97,7 +124,7 @@ class ITechOffer(model.Schema, IDexteritySchema):
 
     patent_status = schema.Choice(
         title=_(u"Patent Status"),
-        vocabulary="genweb.patents.vocabularies.patent_status"
+        vocabulary="genweb6.patents.vocabularies.patent_status"
     )
 
     # XXX: Queremos validar esta condición?

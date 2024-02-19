@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-09-05 07:02+0000\n"
+"POT-Creation-Date: 2024-02-15 08:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,25 +15,17 @@ msgstr ""
 "Domain: genweb6.patents\n"
 "Language: ca\n"
 
-#: ../content/techoffer/techoffer.py:108
+#: ../content/techoffer/techoffer.py:134
 msgid "'Specify business opportunity' field required when 'Others' is selected for 'Business Opportunity'"
 msgstr "El camp 'Especifca la Oportunitat de negoci' és requerit si s'ha seleccionat 'Altres' en 'Oportunitats de negoci'/'Specify business opportunity' field required when 'Others' is selected for 'Business Opportunity'"
 
 #: ../content/techoffer/techoffer.pt:64
-#: ../content/techoffer/techoffer.py:62
+#: ../content/techoffer/techoffer.py:87
 msgid "Applications and Target Market"
 msgstr "Aplicacions i mercat objectiu/Applications and Target Market"
 
-#: ../vocabularies.py:14
-msgid "Applied patent"
-msgstr "Patent sol·licitada/Applied patent"
-
-#: ../vocabularies.py:16
-msgid "Approved patent"
-msgstr "Patent aprovada/Approved patent"
-
 #: ../content/techoffer/techoffer.pt:90
-#: ../content/techoffer/techoffer.py:90
+#: ../content/techoffer/techoffer.py:116
 msgid "Business Opportunity"
 msgstr "Oportunitats de negoci/Business Opportunity"
 
@@ -42,36 +34,28 @@ msgid "Contact"
 msgstr "Contacte/Contact"
 
 #: ../content/techoffer/techoffer.pt:62
-#: ../content/techoffer/techoffer.py:56
+#: ../content/techoffer/techoffer.py:80
 msgid "Current stage of development"
 msgstr "Fase actual de desenvolupament/Current stage of development"
 
-#: ../vocabularies.py:17
-msgid "Denied patent"
-msgstr "Patent denegada/Denied patent"
-
-#: ../content/techoffer/techoffer.py:24
+#: ../content/techoffer/techoffer.py:45
 msgid "Description"
 msgstr "Descripció/Description"
 
-#: ../content/techoffer/techoffer.py:95
+#: ../content/techoffer/techoffer.py:121
 msgid "Fill this field if you selected 'Others' for 'Business Opportunity'"
 msgstr "Omple aquest camp si has seleccionat 'Altres' per 'Oportunitats de negoci'/Fill this field if you selected 'Others' for 'Business Opportunity'"
 
-#: ../content/techoffer/techoffer.py:73
+#: ../content/techoffer/techoffer.py:99
 msgid "First picture"
 msgstr "Primera imatge/First picture"
 
-#: ../content/techoffer/techoffer.py:77
+#: ../content/techoffer/techoffer.py:103
 msgid "First picture caption"
 msgstr "Comentari de la primera imatge/First picture caption"
 
-#: ../vocabularies.py:19
-msgid "Industrial secret"
-msgstr "Secret industrial/Industrial secret"
-
 #: ../content/techoffer/techoffer.pt:60
-#: ../content/techoffer/techoffer.py:50
+#: ../content/techoffer/techoffer.py:73
 msgid "Innovative advantages"
 msgstr "Avantatges innovadors/Innovative advantages"
 
@@ -79,48 +63,32 @@ msgstr "Avantatges innovadors/Innovative advantages"
 msgid "Installs the genweb6.patents add-on."
 msgstr "Instal·lar paquet genweb6.patents/Installs the genweb6.patents add-on."
 
-#: ../content/techoffer/techoffer.py:67
+#: ../content/techoffer/techoffer.py:93
 msgid "Lead Image"
 msgstr "Imatge principal/Lead Image"
 
-#: ../vocabularies.py:12
-msgid "Not possibility of patent"
-msgstr "No possibilitat de patent/Not possibility of patent"
-
-#: ../vocabularies.py:18
-msgid "Other forms of protection"
-msgstr "Altres formes de protecció/Other forms of protection"
-
-#: ../vocabularies.py:36
+#: ../vocabularies.py:43
 msgid "Others"
 msgstr "Altres/Others"
 
-#: ../vocabularies.py:15
-msgid "PCT application"
-msgstr "PCT sol·licitada/PCT application"
-
 #: ../content/techoffer/techoffer.pt:92
-#: ../content/techoffer/techoffer.py:100
+#: ../content/techoffer/techoffer.py:126
 msgid "Patent Status"
-msgstr "Estat de la patent/Patent Status"
+msgstr "Estat de la Propietat Intel·lectual i Industrial/Intelectual Property Status"
 
 #: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:44
 msgid "Pendent offers to review"
 msgstr "Ofertes pendents de revisar"
 
-#: ../vocabularies.py:13
-msgid "Pending of protection"
-msgstr "Pendent de protecció/Pending of protection"
-
-#: ../content/techoffer/techoffer.py:31
+#: ../content/techoffer/techoffer.py:52
 msgid "Reference number"
 msgstr "Número de referència/Reference number"
 
-#: ../content/techoffer/techoffer.py:85
+#: ../content/techoffer/techoffer.py:111
 msgid "Second image caption"
 msgstr "Comentari de la segona imatge/Second image caption"
 
-#: ../content/techoffer/techoffer.py:81
+#: ../content/techoffer/techoffer.py:107
 msgid "Second picture"
 msgstr "Segona imatge/Second picture"
 
@@ -128,7 +96,7 @@ msgstr "Segona imatge/Second picture"
 msgid "See more technologies at"
 msgstr "Veu més tecnologies a/See more technologies at"
 
-#: ../content/techoffer/techoffer.py:94
+#: ../content/techoffer/techoffer.py:120
 msgid "Specify Business Opportunity"
 msgstr "Especifca la Oportunitat de negoci/Specify Business Opportunity"
 
@@ -140,20 +108,12 @@ msgstr "Oferta Tecnològica"
 msgid "Technological Offer Filter"
 msgstr "Filtre d'Oferta Tecnológica"
 
-#: ../content/techoffer/techoffer.py:44
+#: ../content/techoffer/techoffer.py:66
 msgid "Technology"
 msgstr "Tecnologia/Technology"
 
-#: ../vocabularies.py:26
-msgid "Technology available to be licensed"
-msgstr "Tecnologia disponible per a ser llicenciada/Technology available to be licensed"
-
-#: ../vocabularies.py:31
-msgid "Technology available to be licensed with technical cooperation"
-msgstr "Tecnologia disponible per a ser llicenciada amb cooperació tècnica/Technology available to be licensed with technical cooperation"
-
 #: ../content/techoffer/techoffer.pt:56
-#: ../content/techoffer/techoffer.py:38
+#: ../content/techoffer/techoffer.py:59
 msgid "The Challenge"
 msgstr "El Repte/The Challenge"
 
@@ -161,13 +121,33 @@ msgstr "El Repte/The Challenge"
 msgid "The Technology"
 msgstr "La Tecnologia/The Technology"
 
-#: ../content/techoffer/techoffer.py:17
+#: ../content/techoffer/techoffer.py:38
 msgid "Title"
 msgstr "Títol/Title"
 
 #: ../configure.zcml:48
 msgid "Uninstalls the genweb6.patents add-on."
 msgstr "Desinstal·lar paquet genweb6.patents"
+
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:74
+msgid "advantages_description"
+msgstr "Màxim 1100 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/1100 characters maximum allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box"
+
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:88
+msgid "applications_description"
+msgstr "Màxim 400 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/400 characters maximum allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box"
+
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:60
+msgid "challenge_description"
+msgstr "Màxim 1100 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/1100 characters maximum allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box"
+
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:81
+msgid "dev_stage_description"
+msgstr "Màxim 450 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/450 characters maximum allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box"
 
 #: ../content/techoffer/techoffer.pt:107
 msgid "filed under:"
@@ -190,3 +170,8 @@ msgstr "Etiquetes"
 #: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:25
 msgid "search"
 msgstr "Filtre"
+
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:67
+msgid "technology_description"
+msgstr "Màxim 850 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/850 characters maximum allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box"

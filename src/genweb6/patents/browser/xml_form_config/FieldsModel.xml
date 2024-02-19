@@ -1,18 +1,18 @@
-<model xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns:easyform="http://namespaces.plone.org/supermodel/easyform" xmlns="http://namespaces.plone.org/supermodel/schema">
+<model xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="genweb6.patents" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns:easyform="http://namespaces.plone.org/supermodel/easyform" xmlns="http://namespaces.plone.org/supermodel/schema">
   <schema>
     <field name="title" type="zope.schema.TextLine" easyform:serverSide="False" easyform:THidden="False">
       <description/>
-      <title>T&#237;tol/Title</title>
+      <title i18n:translate="">Title</title>
     </field>
     <field name="description" type="zope.schema.Text">
       <description/>
       <required>False</required>
-      <title>Descripci&#243;/Description</title>
+      <title i18n:translate="">Description</title>
     </field>
     <field name="ref_num" type="zope.schema.TextLine" easyform:serverSide="False" easyform:THidden="True">
       <default>-</default>
       <description/>
-      <title>N&#250;mero de refer&#232;ncia/Reference number</title>
+      <title i18n:translate="">Reference number</title>
     </field>
     <field name="category" type="zope.schema.Choice" easyform:serverSide="False" easyform:THidden="False">
       <default>Aerospace</default>
@@ -21,34 +21,34 @@
       <vocabulary>plone.app.vocabularies.Keywords</vocabulary>
     </field>
     <field name="challenge" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
-      <description/>
+      <description i18n:translate="">challenge_description</description>
       <max_length>800</max_length>
-      <title>El Repte/The Challenge</title>
+      <title i18n:translate="">The Challenge</title>
     </field>
     <field name="technology" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
-      <description/>
+      <description i18n:translate="">technology_description</description>
       <max_length>600</max_length>
-      <title>Tecnologia/Technology</title>
+      <title i18n:translate="">Technology</title>
     </field>
     <field name="advantages" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
-      <description/>
+      <description i18n:translate="">advantages_description</description>
       <max_length>1000</max_length>
-      <title>Avantatges innovadors/Innovative advantages</title>
+      <title i18n:translate="">Innovative advantages</title>
     </field>
     <field name="dev_stage" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
-      <description/>
+      <description i18n:translate="">dev_stage_description</description>
       <max_length>350</max_length>
-      <title>Fase actual de desenvolupament/Current stage of development</title>
+      <title i18n:translate="">Current stage of development</title>
     </field>
     <field name="applications" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
-      <description/>
+      <description i18n:translate="">applications_description</description>
       <max_length>400</max_length>
-      <title>Aplicacions i mercat objectiu/Applications and Target Market</title>
+      <title i18n:translate="">Applications and Target Market</title>
     </field>
     <field name="image1" type="plone.namedfile.field.NamedBlobImage">
       <description/>
       <required>False</required>
-      <title>Primera imatge/First picture</title>
+      <title i18n:translate="">First picture</title>
     </field>
     <field name="caption1" type="zope.schema.TextLine">
       <description/>
@@ -58,29 +58,29 @@
     <field name="image2" type="plone.namedfile.field.NamedBlobImage" easyform:serverSide="False" easyform:THidden="False">
       <description/>
       <required>False</required>
-      <title>Segona imatge/Second picture</title>
+      <title i18n:translate="">Second picture</title>
     </field>
     <field name="caption2" type="zope.schema.TextLine">
       <description/>
       <required>False</required>
-      <title>Comentari de la segona imatge/Second image caption</title>
+      <title i18n:translate="">Second image caption</title>
     </field>
     <field name="opportunity" type="zope.schema.Choice" easyform:serverSide="False" easyform:THidden="False">
       <default>Technology available to be licensed</default>
       <description/>
-      <title>Oportunitats de negoci/Business Opportunity</title>
-      <vocabulary>genweb.patents.vocabularies.business_opportunity</vocabulary>
+      <title i18n:translate="">Business Opportunity</title>
+      <vocabulary>genweb6.patents.vocabularies.business_opportunity</vocabulary>
     </field>
     <field name="other_opportunity" type="zope.schema.TextLine" easyform:depends_on="condition: form.widgets.opportunity:list=Others; transition: slide; effect-duration: 500" easyform:serverSide="False" easyform:THidden="False">
-      <description>Omple aquest camp si has seleccionat 'Altres' per 'Oportunitats de negoci'/Fill this field if you selected 'Others' for 'Business Opportunity'</description>
+      <description i18n:translate="">Fill this field if you selected 'Others' for 'Business Opportunity'</description>
       <required>False</required>
-      <title>Especifca la Oportunitat de negoci/Specify Business Opportunity</title>
+      <title i18n:translate="">Specify Business Opportunity</title>
     </field>
     <field name="patent_status" type="zope.schema.Choice" easyform:serverSide="False" easyform:THidden="False">
       <default>Not possibility of patent</default>
       <description/>
-      <title>Estat de la patent/Patent Status</title>
-      <vocabulary>genweb.patents.vocabularies.patent_status</vocabulary>
+      <title i18n:translate="">Patent Status</title>
+      <vocabulary>genweb6.patents.vocabularies.patent_status</vocabulary>
     </field>
   </schema>
 </model>
