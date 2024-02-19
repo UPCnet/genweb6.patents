@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-1.3 (unreleased)
+1.3 (2024-02-19)
 ----------------
 
-- Nothing changed yet.
-
+* Update patent pdf font size and increase char limits [Ivan Kosovtsev]
+* Update genweb6.patents.vocabularies to use values from the registry [Ivan Kosovtsev]
 
 1.2 (2024-01-12)
 ----------------
