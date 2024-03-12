@@ -20,29 +20,24 @@
       <title>Categoria/Category</title>
       <vocabulary>plone.app.vocabularies.Keywords</vocabulary>
     </field>
-    <field name="challenge" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
+    <field name="challenge" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1100" easyform:THidden="False">
       <description i18n:translate="">challenge_description</description>
-      <max_length>800</max_length>
       <title i18n:translate="">The Challenge</title>
     </field>
-    <field name="technology" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
+    <field name="technology" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags850" easyform:THidden="False">
       <description i18n:translate="">technology_description</description>
-      <max_length>600</max_length>
       <title i18n:translate="">Technology</title>
     </field>
-    <field name="advantages" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
+    <field name="advantages" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1100" easyform:THidden="False">
       <description i18n:translate="">advantages_description</description>
-      <max_length>1000</max_length>
       <title i18n:translate="">Innovative advantages</title>
     </field>
-    <field name="dev_stage" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
+    <field name="dev_stage" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags450" easyform:THidden="False">
       <description i18n:translate="">dev_stage_description</description>
-      <max_length>350</max_length>
       <title i18n:translate="">Current stage of development</title>
     </field>
-    <field name="applications" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:THidden="False">
+    <field name="applications" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags400" easyform:THidden="False">
       <description i18n:translate="">applications_description</description>
-      <max_length>400</max_length>
       <title i18n:translate="">Applications and Target Market</title>
     </field>
     <field name="image1" type="plone.namedfile.field.NamedBlobImage">

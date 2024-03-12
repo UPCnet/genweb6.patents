@@ -1,0 +1,22 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+    <utility
+        name="maxLengthNoTags400"
+        provides="collective.easyform.validators.IFieldValidator"
+        component=".validators.maxLengthNoTags400"
+    />
+    <utility
+        name="maxLengthNoTags450"
+        provides="collective.easyform.validators.IFieldValidator"
+        component=".validators.maxLengthNoTags450"
+    />
+    <utility
+        name="maxLengthNoTags850"
+        provides="collective.easyform.validators.IFieldValidator"
+        component=".validators.maxLengthNoTags850"
+    />
+    <utility
+        name="maxLengthNoTags1100"
+        provides="collective.easyform.validators.IFieldValidator"
+        component=".validators.maxLengthNoTags1100"
+    />
+</configure>

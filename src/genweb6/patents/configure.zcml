@@ -21,6 +21,7 @@
   <include file="permissions.zcml" />
   <include file="upgrades.zcml" />
   <include file="patches.zcml" />
+  <include file="validators.zcml" />
 
   <browser:page
      name="view"

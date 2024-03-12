@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 from pathlib import Path
+import unicodedata
+import logging
 from plone import api
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import get_installer
 from Products.Five.browser import BrowserView
 
-import unicodedata
+logger = logging.getLogger(__name__)
 
 
 class TechOfferFilterView(BrowserView):
@@ -31,7 +33,11 @@ class TechOfferFilterView(BrowserView):
             if self.query:
                 kw['SearchableText'] = self.query
 
-        return catalog(portal_type="TechOffer", review_state='published', sort_on='getObjPositionInParent', **kw)
+        return catalog(
+            portal_type="TechOffer",
+            review_state='published',
+            sort_on='getObjPositionInParent', **kw
+        )
 
     def get_tags(self):
         tags = []
@@ -39,7 +45,10 @@ class TechOfferFilterView(BrowserView):
             tags += list(set(res.Subject))
 
         listTags = list(dict.fromkeys(tags))
-        listTags.sort(key=lambda key: unicodedata.normalize('NFKD', key).encode('ascii', errors='ignore'))
+        listTags.sort(
+            key=lambda key: unicodedata.normalize(
+                'NFKD', key).encode('ascii', errors='ignore')
+        )
 
         return listTags
 
@@ -73,7 +82,8 @@ class configure_techoffer(BrowserView):
 Configura la pàgina de patents:
     - Crea les carpetes .../patents  (si no existeix)
     - Estableix com a vista de ../patents el filtre de oferta tecnològica
-    - Crea el formulari .../patents/create-technological-offer, que s'encarrega de crear ofertes tecnològiques.
+    - Crea el formulari .../patents/create-technological-offer, que s'encarrega de crear ofertes
+    tecnològiques.
         - Si el formulari ja existeix, es sobreescriu (es perden tots els canvis fets)
     """
 
@@ -95,13 +105,20 @@ Configura la pàgina de patents:
 
         qi = get_installer(self.context)
 
-        required_products = ['genweb6.patents', 'collective.easyform', 'collective.easyformplugin.createdx']
-        missing_products = list(filter(lambda prod: not qi.is_product_installed(prod), required_products))
+        required_products = [
+            'genweb6.patents', 'collective.easyform', 'collective.easyformplugin.createdx'
+        ]
+        missing_products = list(
+            filter(lambda prod: not qi.is_product_installed(prod), required_products)
+        )
         if missing_products:
+            logger.error(
+                f'Form not created. Missing products: {missing_products}')
             return f'Form not created.\nThere are missing products: {missing_products}'
 
         # La ruta hacia el directorio de este "views.py". Se tiene que tener esto en cuenta
-        # en el caso de que se mueva esta vista, porque no se encontrarán los xml de "xml_form_config"
+        # en el caso de que se mueva esta vista, porque no se encontrarán los xml de
+        # "xml_form_config"
         current_path = Path(__file__).parent
 
         xml_config_path = current_path / 'xml_form_config'
@@ -110,20 +127,25 @@ Configura la pàgina de patents:
         with open(xml_config_path / 'ActionModel.xml', 'r') as f:
             actions_model = f.read()
 
-        patents = api.content.get('/ca/nova-patents')
+        patents = api.content.get('/ca/patents')
+        logger.info("Getting patents folder")
         if not patents:
+            logger.info("Patents folder not found, creating it at /ca/patents")
             patents = api.content.create(
                 type='Folder',
-                id='nova-patents',
-                title='Patents (Nova versió)',
+                id='patents',
+                title='Patents',
                 container=api.content.get('/ca')
             )
 
-        techoffer = patents.get("oferta-tecnologica")
+        techoffer = patents.get("nova-oferta-tecnologica")
+        logger.info("Getting technological offer folder")
         if not techoffer:
+            logger.info("Technological offer folder not found, creating it at " +
+                        " /ca/patents/nova-oferta-tecnologica")
             techoffer = api.content.create(
                 type='Folder',
-                id='oferta-tecnologica',
+                id='nova-oferta-tecnologica',
                 title='Oferta Tecnològica/Technological Offer (Nova versió)',
                 container=patents,
                 subject=tags
@@ -132,7 +154,10 @@ Configura la pàgina de patents:
         techoffer.setLayout('techoffer_filter')
 
         easyform = techoffer.get("create-technological-offer")
+        logger.info("Getting create technological offer form")
         if easyform:
+            logger.warning("Create technological offer form already exists. Overwriting it at" +
+                           "/ca/patents/nova-oferta-tecnologica/create-technological-offer")
             api.content.delete(easyform)
 
         easyform = api.content.create(
@@ -144,7 +169,8 @@ Configura la pàgina de patents:
             container=techoffer,
             exclude_from_nav=False,
             thankstitle="Gràcies",
-            thanksdescription="S'ha creat una nova oferta tecnològica. Es revisarà el més aviat possible.",
+            thanksdescription=("S'ha creat una nova oferta tecnològica." +
+                               "Es revisarà el més aviat possible."),
             showAll=False,
             showFields=['title'],
             includeEmpties=True
@@ -182,4 +208,5 @@ Configura la pàgina de patents:
         return f"Patents are located at {patents.absolute_url()}\n\n" + \
                f"Technological offers are located at {techoffer.absolute_url()}\n\n" + \
                f"Create technological offer form is available at {easyform.absolute_url()}\n\n" + \
-               f"Collection of technological offers in draft state is available at {collection.absolute_url()}"
+               "Collection of technological offers in draft state is available at " + \
+               f"{collection.absolute_url()}"

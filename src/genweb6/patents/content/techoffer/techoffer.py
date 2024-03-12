@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import re
 from genweb6.patents import _
 from zope.i18nmessageid.message import MessageFactory
 from plone.app.dexterity import textindexer
@@ -11,15 +10,14 @@ from plone.namedfile import field as namedfile
 from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer, invariant, Invalid  # noqa F401
+from genweb6.patents.validators import maxLengthValidatorNoTags
 
 
 def max_length_validator(max_length):
     _pl = MessageFactory("plone")
 
     def validator(value):
-        filtered = re.sub(r'<[^>]*>', '', value.raw)
-        filtered = filtered.replace('\r\n', '').replace('\n', '')
-        if len(filtered) > max_length:
+        if not maxLengthValidatorNoTags(max_length, value):
             raise Invalid(
                 _pl(
                     "msg_text_too_long",
@@ -131,8 +129,8 @@ class ITechOffer(model.Schema, IDexteritySchema):
     @invariant
     def other_opportunityInvariant(data):
         if not bool(data.other_opportunity) and data.opportunity == "Others":
-            raise Invalid(_("'Specify business opportunity' field required when 'Others' is selected"
-                            + " for 'Business Opportunity'"))
+            raise Invalid(_("'Specify business opportunity' field required when 'Others'"
+                            + "is selected for 'Business Opportunity'"))
 
 
 @implementer(ITechOffer)

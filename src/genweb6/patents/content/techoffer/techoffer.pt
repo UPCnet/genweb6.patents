@@ -101,7 +101,7 @@
                                 <div
                                 tal:define="categories context/Subject|nothing;"
                                 tal:condition="categories"
-                                class="card row-fluid mt-3">
+                                class="card row-fluid mt-3 no-print">
                                 <div class="card-body p-2" id='techoffer-tags-list'>
                                     <i class="bi bi-tag"></i>
                                     <tal:filedunder i18n:translate="">filed under:</tal:filedunder>

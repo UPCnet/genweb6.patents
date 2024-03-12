@@ -87,27 +87,27 @@ class ViewsIntegrationTest(unittest.TestCase):
         self.assertIsNone(self.portal['ca'].get('patents-py'))
 
         expected_response = (
-            f'Patents are located at {self.portal.absolute_url()}/ca/nova-patents\n\n'
+            f'Patents are located at {self.portal.absolute_url()}/ca/patents\n\n'
 
-            + f"Technological offers are located at {self.portal.absolute_url()}/ca/nova-patents/oferta-tecnologica\n\n"
+            + f"Technological offers are located at {self.portal.absolute_url()}/ca/patents/nova-oferta-tecnologica\n\n"
 
             + 'Create technological offer form is available at '
-            + f'{self.portal.absolute_url()}/ca/nova-patents/oferta-tecnologica/create-technological-offer\n\n'
+            + f'{self.portal.absolute_url()}/ca/patents/nova-oferta-tecnologica/create-technological-offer\n\n'
 
             + 'Collection of technological offers in draft state is available at '
-            + f'{self.portal.absolute_url()}/ca/nova-patents/oferta-tecnologica/technological-offers-to-review'
+            + f'{self.portal.absolute_url()}/ca/patents/nova-oferta-tecnologica/technological-offers-to-review'
         )
 
         # check that the view returned expected response
         self.assertEqual(expected_response, view())
 
         # check that patents folder was created successfully
-        patents = self.portal['ca']['nova-patents']
+        patents = self.portal['ca']['patents']
         self.assertIsNotNone(patents)
         self.assertEqual(patents.portal_type, 'Folder')
 
         # check that oferta tecnologica folder was created successfully
-        techoffer = patents['oferta-tecnologica']
+        techoffer = patents['nova-oferta-tecnologica']
         self.assertIsNotNone(techoffer)
         self.assertEqual(techoffer.portal_type, 'Folder')
         self.assertEqual(techoffer.getLayout(), 'techoffer_filter')
@@ -120,7 +120,8 @@ class ViewsIntegrationTest(unittest.TestCase):
         # check that a non-default field is present in the form's xml fields model
         form_field = (
             '<field name="advantages" type="plone.app.textfield.RichText" '
-            + 'easyform:serverSide="False" easyform:THidden="False">'
+            + 'easyform:serverSide="False" easyform:validators="maxLengthNoTags1100" '
+            + 'easyform:THidden="False">'
         )
         self.assertIn(form_field, easyform.fields_model)
 
@@ -160,7 +161,7 @@ class ViewsIntegrationTest(unittest.TestCase):
         view()
 
         # modify some created contents data
-        techoffer = api.content.get('/ca/nova-patents/oferta-tecnologica')
+        techoffer = api.content.get('/ca/patents/nova-oferta-tecnologica')
         self.assertIsNotNone(techoffer)
         techoffer.setLayout('list_view')
         techoffer.title = techoffer_title
@@ -171,7 +172,7 @@ class ViewsIntegrationTest(unittest.TestCase):
         collection = techoffer['technological-offers-to-review']
         collection.title = collection_title
 
-        # create contents inside oferta-tecnologica to check it is not deleted
+        # create contents inside nova-oferta-tecnologica to check it is not deleted
         api.content.create(
             type='Folder',
             id='test-folder',
@@ -188,7 +189,7 @@ class ViewsIntegrationTest(unittest.TestCase):
         transaction.commit()
 
         # check new info saved
-        techoffer = api.content.get('/ca/nova-patents/oferta-tecnologica')
+        techoffer = api.content.get('/ca/patents/nova-oferta-tecnologica')
         easyform = techoffer['create-technological-offer']
         collection = techoffer['technological-offers-to-review']
 
@@ -204,7 +205,7 @@ class ViewsIntegrationTest(unittest.TestCase):
         view()
 
         # get new data
-        techoffer = api.content.get('/ca/nova-patents/oferta-tecnologica')
+        techoffer = api.content.get('/ca/patents/nova-oferta-tecnologica')
         easyform = techoffer['create-technological-offer']
         collection = techoffer['technological-offers-to-review']
         test_folder = techoffer['test-folder']
