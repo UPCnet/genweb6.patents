@@ -2,11 +2,10 @@ Changelog
 =========
 
 
-1.4 (unreleased)
+1.4 (2024-03-12)
 ----------------
 
-- Nothing changed yet.
-
+* [FIX] Create new validators for easyform richtext fields validation [Ivan Kosovtsev]
 
 1.3 (2024-02-19)
 ----------------
