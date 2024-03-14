@@ -120,7 +120,7 @@ class ViewsIntegrationTest(unittest.TestCase):
         # check that a non-default field is present in the form's xml fields model
         form_field = (
             '<field name="advantages" type="plone.app.textfield.RichText" '
-            + 'easyform:serverSide="False" easyform:validators="maxLengthNoTags1100" '
+            + 'easyform:serverSide="False" easyform:validators="maxLengthNoTags1500" '
             + 'easyform:THidden="False">'
         )
         self.assertIn(form_field, easyform.fields_model)
