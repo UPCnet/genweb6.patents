@@ -63,6 +63,11 @@
       factory="genweb6.patents.vocabularies.BusinessOpportunity"
       />
 
+  <utility
+      name="genweb6.patents.vocabularies.parent_categories"
+      factory="genweb6.patents.vocabularies.ParentCategories"
+      />
+
   <!-- -*- extra stuff goes here -*- -->
 
   <!-- Publish static files -->

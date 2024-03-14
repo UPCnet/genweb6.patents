@@ -8,6 +8,7 @@ from zope.schema.vocabulary import SimpleVocabulary
 from zope.interface import implementer
 from zope.component import getUtility
 from plone.registry.interfaces import IRegistry
+from zope.globalrequest import getRequest
 
 
 @implementer(IVocabularyFactory)
@@ -44,3 +45,20 @@ class BusinessOpportunity:
             )
         )
         return SimpleVocabulary(terms)
+
+
+@implementer(IVocabularyFactory)
+class ParentCategories:
+    """Vocabulary factory for PatentCategory. Returns a list of categories defined
+       in the parent container.
+    """
+    def __call__(self, *args, **kwargs):
+        request = getRequest()
+        context = request.PARENTS[0]
+        subjects = sorted(context.getParentNode().Subject())
+        return SimpleVocabulary([
+            SimpleTerm(
+                value=subject,
+                title=subject
+            ) for subject in subjects
+        ])

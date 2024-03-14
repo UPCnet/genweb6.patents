@@ -18,25 +18,25 @@
       <default>Aerospace</default>
       <description/>
       <title>Categoria/Category</title>
-      <vocabulary>plone.app.vocabularies.Keywords</vocabulary>
+      <vocabulary>genweb6.patents.vocabularies.parent_categories</vocabulary>
     </field>
-    <field name="challenge" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1100" easyform:THidden="False">
+    <field name="challenge" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1500" easyform:THidden="False">
       <description i18n:translate="">challenge_description</description>
       <title i18n:translate="">The Challenge</title>
     </field>
-    <field name="technology" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags850" easyform:THidden="False">
+    <field name="technology" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1500" easyform:THidden="False">
       <description i18n:translate="">technology_description</description>
       <title i18n:translate="">Technology</title>
     </field>
-    <field name="advantages" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1100" easyform:THidden="False">
+    <field name="advantages" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1500" easyform:THidden="False">
       <description i18n:translate="">advantages_description</description>
       <title i18n:translate="">Innovative advantages</title>
     </field>
-    <field name="dev_stage" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags450" easyform:THidden="False">
+    <field name="dev_stage" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags500" easyform:THidden="False">
       <description i18n:translate="">dev_stage_description</description>
       <title i18n:translate="">Current stage of development</title>
     </field>
-    <field name="applications" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags400" easyform:THidden="False">
+    <field name="applications" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags500" easyform:THidden="False">
       <description i18n:translate="">applications_description</description>
       <title i18n:translate="">Applications and Target Market</title>
     </field>

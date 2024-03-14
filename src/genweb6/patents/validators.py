@@ -24,17 +24,9 @@ def maxLegnthNoTagsGeneric(max_length, value, **kwargs):
 # de otra forma en el easyform. Cada campo de texto que necesite esta validacion debe tener
 # su propio validator con la longitud fijada. No se puede hacer un validator generico
 # que reciba la longitud como parametro
-def maxLengthNoTags400(value, **kwargs):
-    return maxLegnthNoTagsGeneric(400, value, **kwargs)
+def maxLengthNoTags500(value, **kwargs):
+    return maxLegnthNoTagsGeneric(500, value, **kwargs)
 
 
-def maxLengthNoTags450(value, **kwargs):
-    return maxLegnthNoTagsGeneric(450, value, **kwargs)
-
-
-def maxLengthNoTags850(value, **kwargs):
-    return maxLegnthNoTagsGeneric(850, value, **kwargs)
-
-
-def maxLengthNoTags1100(value, **kwargs):
-    return maxLegnthNoTagsGeneric(1100, value, **kwargs)
+def maxLengthNoTags1500(value, **kwargs):
+    return maxLegnthNoTagsGeneric(1500, value, **kwargs)

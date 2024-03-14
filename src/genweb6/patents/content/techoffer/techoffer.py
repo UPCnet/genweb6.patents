@@ -56,35 +56,35 @@ class ITechOffer(model.Schema, IDexteritySchema):
     challenge = RichText(
         title=_(u"The Challenge"),
         description=_(u"challenge_description"),
-        constraint=max_length_validator(1100)
+        constraint=max_length_validator(1500)
     )
 
     textindexer.searchable('technology')
     technology = RichText(
         title=_(u"Technology"),
         description=_(u"technology_description"),
-        constraint=max_length_validator(850)
+        constraint=max_length_validator(1500)
     )
 
     textindexer.searchable('advantages')
     advantages = RichText(
         title=_(u"Innovative advantages"),
         description=_(u"advantages_description"),
-        constraint=max_length_validator(1100)
+        constraint=max_length_validator(1500)
     )
 
     textindexer.searchable('dev_stage')
     dev_stage = RichText(
         title=_(u"Current stage of development"),
         description=_(u"dev_stage_description"),
-        constraint=max_length_validator(450)
+        constraint=max_length_validator(500)
     )
 
     textindexer.searchable('applications')
     applications = RichText(
         title=_(u"Applications and Target Market"),
         description=_(u"applications_description"),
-        constraint=max_length_validator(400)
+        constraint=max_length_validator(500)
     )
 
     image = namedfile.NamedBlobImage(

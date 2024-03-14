@@ -22,12 +22,12 @@ msgstr "El camp 'Especifca la Oportunitat de negoci' és requerit si s'ha selecc
 #: ../content/techoffer/techoffer.pt:64
 #: ../content/techoffer/techoffer.py:87
 msgid "Applications and Target Market"
-msgstr "Aplicacions i mercat objectiu/Applications and Target Market"
+msgstr "Aplicacions i mercat objectiu/Applications and target market"
 
 #: ../content/techoffer/techoffer.pt:90
 #: ../content/techoffer/techoffer.py:116
 msgid "Business Opportunity"
-msgstr "Oportunitats de negoci/Business Opportunity"
+msgstr "Oportunitats de negoci/Business opportunity"
 
 #: ../content/techoffer/techoffer.pt:94
 msgid "Contact"
@@ -44,7 +44,7 @@ msgstr "Descripció/Description"
 
 #: ../content/techoffer/techoffer.py:121
 msgid "Fill this field if you selected 'Others' for 'Business Opportunity'"
-msgstr "Omple aquest camp si has seleccionat 'Altres' per 'Oportunitats de negoci'/Fill this field if you selected 'Others' for 'Business Opportunity'"
+msgstr "Omple aquest camp si has seleccionat 'Altres' per 'Oportunitats de negoci'/Fill this field if you selected 'Others' for 'Business opportunity'"
 
 #: ../content/techoffer/techoffer.py:99
 msgid "First picture"
@@ -57,7 +57,7 @@ msgstr "Comentari de la primera imatge/First picture caption"
 #: ../content/techoffer/techoffer.pt:60
 #: ../content/techoffer/techoffer.py:73
 msgid "Innovative advantages"
-msgstr "Avantatges innovadors/Innovative advantages"
+msgstr "Avantatges innovadores/Innovative advantages"
 
 #: ../configure.zcml:39
 msgid "Installs the genweb6.patents add-on."
@@ -65,7 +65,7 @@ msgstr "Instal·lar paquet genweb6.patents/Installs the genweb6.patents add-on."
 
 #: ../content/techoffer/techoffer.py:93
 msgid "Lead Image"
-msgstr "Imatge principal/Lead Image"
+msgstr "Imatge principal/Lead image"
 
 #: ../vocabularies.py:43
 msgid "Others"
@@ -74,7 +74,7 @@ msgstr "Altres/Others"
 #: ../content/techoffer/techoffer.pt:92
 #: ../content/techoffer/techoffer.py:126
 msgid "Patent Status"
-msgstr "Estat de la Propietat Intel·lectual i Industrial/Intelectual Property Status"
+msgstr "Estat de la propietat intel·lectual i industrial/Intelectual property status"
 
 #: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:44
 msgid "Pendent offers to review"
@@ -98,15 +98,15 @@ msgstr "Veu més tecnologies a/See more technologies at"
 
 #: ../content/techoffer/techoffer.py:120
 msgid "Specify Business Opportunity"
-msgstr "Especifca la Oportunitat de negoci/Specify Business Opportunity"
+msgstr "Especifca la oportunitat de negoci/Specify business opportunity"
 
 #: ../profiles/default/types/TechOffer.xml
 msgid "Technological Offer"
-msgstr "Oferta Tecnològica"
+msgstr "Oferta tecnològica"
 
 #: ../browser/configure.zcml:19
 msgid "Technological Offer Filter"
-msgstr "Filtre d'Oferta Tecnológica"
+msgstr "Filtre d'Oferta tecnológica"
 
 #: ../content/techoffer/techoffer.py:66
 msgid "Technology"
@@ -115,11 +115,11 @@ msgstr "Tecnologia/Technology"
 #: ../content/techoffer/techoffer.pt:56
 #: ../content/techoffer/techoffer.py:59
 msgid "The Challenge"
-msgstr "El Repte/The Challenge"
+msgstr "El repte/The challenge"
 
 #: ../content/techoffer/techoffer.pt:58
 msgid "The Technology"
-msgstr "La Tecnologia/The Technology"
+msgstr "La tecnologia/The technology"
 
 #: ../content/techoffer/techoffer.py:38
 msgid "Title"
@@ -132,22 +132,22 @@ msgstr "Desinstal·lar paquet genweb6.patents"
 #: ../browser/xml_form_config/FieldsModel.xml
 #: ../content/techoffer/techoffer.py:74
 msgid "advantages_description"
-msgstr "Màxim 1100 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/1100 characters maximum allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box"
+msgstr "Màxim 1500 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/A maximum of 1500 characters is allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box."
 
 #: ../browser/xml_form_config/FieldsModel.xml
 #: ../content/techoffer/techoffer.py:88
 msgid "applications_description"
-msgstr "Màxim 400 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/400 characters maximum allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box"
+msgstr "Màxim 500 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/A maximum of 500 characters is allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box."
 
 #: ../browser/xml_form_config/FieldsModel.xml
 #: ../content/techoffer/techoffer.py:60
 msgid "challenge_description"
-msgstr "Màxim 1100 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/1100 characters maximum allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box"
+msgstr "Màxim 1500 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/A maximum of 1500 characters is allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box."
 
 #: ../browser/xml_form_config/FieldsModel.xml
 #: ../content/techoffer/techoffer.py:81
 msgid "dev_stage_description"
-msgstr "Màxim 450 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/450 characters maximum allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box"
+msgstr "Màxim 500 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/A maximum of 500 characters is allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box."
 
 #: ../content/techoffer/techoffer.pt:107
 msgid "filed under:"
@@ -174,4 +174,4 @@ msgstr "Filtre"
 #: ../browser/xml_form_config/FieldsModel.xml
 #: ../content/techoffer/techoffer.py:67
 msgid "technology_description"
-msgstr "Màxim 850 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/850 characters maximum allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box"
+msgstr "Màxim 1500 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/A maximum of 1500 characters is allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box."
