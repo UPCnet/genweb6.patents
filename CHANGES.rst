@@ -2,11 +2,13 @@ Changelog
 =========
 
 
-1.5 (unreleased)
+1.5 (2024-03-18)
 ----------------
 
-- Nothing changed yet.
-
+* fix typo (pint -> print) [Ivan Kosovtsev]
+* Avoid section breaks between pages in pdfs [Ivan Kosovtsev]
+* Fix test [Ivan Kosovtsev]
+* Change category vocabulary (it should get categories from the parent) + update form limits [Ivan Kosovtsev]
 
 1.4 (2024-03-12)
 ----------------
