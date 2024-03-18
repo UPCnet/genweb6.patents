@@ -6,6 +6,10 @@ body.portaltype-techoffer {
         display: none;
     }
 
+    .h-not-first > h3 {
+        margin-top: 2rem;
+    }
+
     @media only screen and (max-width: 639px){
         
         .row-fluid [class*="span"] {
@@ -94,7 +98,11 @@ body.portaltype-techoffer {
         #head-upc-logo, img#head-upc-logo{
             margin-bottom: 1rem !important;
             max-width: 250px;
-        }                    
+        }
+        
+        .print-no-break {
+            break-inside: avoid !important;
+        }
 
     }
 }

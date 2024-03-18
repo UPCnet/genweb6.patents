@@ -53,18 +53,28 @@
                         <div class="row-fluid">
                             <div class="span9">
                                 <div class="box">
-                                    <h3 i18n:translate="">The Challenge</h3>
-                                    <tal:block tal:replace="structure context/challenge/output"></tal:block>
-                                    <h3 i18n:translate="">The Technology</h3>
-                                    <tal:block tal:replace="structure context/technology/output"></tal:block>
-                                    <h3 i18n:translate="">Innovative advantages</h3>
-                                    <tal:block tal:replace="structure context/advantages/output"></tal:block>
-                                    <h3 i18n:translate="">Current stage of development</h3>
-                                    <tal:block tal:replace="structure context/dev_stage/output"></tal:block>
-                                    <h3 i18n:translate="">Applications and Target Market</h3>
-                                    <div class='last-richtext-paragraph'>
-                                        <tal:block
-                                            tal:replace="structure context/applications/output"></tal:block>
+                                    <div class="pint-no-break">
+                                        <h3 i18n:translate="">The Challenge</h3>
+                                        <tal:block tal:replace="structure context/challenge/output"></tal:block>
+                                    </div>
+                                    <div class="pint-no-break h-not-first">
+                                        <h3 i18n:translate="">The Technology</h3>
+                                        <tal:block tal:replace="structure context/technology/output"></tal:block>
+                                    </div>
+                                    <div class="pint-no-break h-not-first">
+                                        <h3 i18n:translate="">Innovative advantages</h3>
+                                        <tal:block tal:replace="structure context/advantages/output"></tal:block>
+                                    </div>
+                                    <div class="pint-no-break h-not-first">
+                                        <h3 i18n:translate="">Current stage of development</h3>
+                                        <tal:block tal:replace="structure context/dev_stage/output"></tal:block>
+                                    </div>
+                                    <div class="print-no-break h-not-first">
+                                        <h3 i18n:translate="">Applications and Target Market</h3>
+                                        <div class='last-richtext-paragraph'>
+                                            <tal:block
+                                                tal:replace="structure context/applications/output"></tal:block>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -87,17 +97,23 @@
                                         tal:condition="python: bool(caption)"
                                         class="card p-3 text-bg-light mb-4" tal:content="caption"></p>
                                 </tal:img2block>
-                                <h4 i18n:translate="">Business Opportunity</h4>
-                                <p tal:content="python: context.opportunity if context.opportunity != 'Others' else context.other_opportunity"></p>
-                                <h4 i18n:translate="">Patent Status</h4>
-                                <p tal:content="context/patent_status"></p>
-                                <h4 i18n:translate="">Contact</h4>
-                                <p>Servei de Gestió de la Innovació<br /> T. + 34 93 413 623<br />
-                                    gestio.innovacio@upc.edu</p>
-                                <h4 i18n:translate="">See more technologies at</h4>
-                                <a
-                                    tal:define="patents_link string:https://www.upc.edu/innovacio/ca/patents/oferta-tecnologica"
-                                    tal:attributes="href patents_link" tal:content="patents_link"></a>
+                                    <h4 i18n:translate="">Business Opportunity</h4>
+                                    <p tal:content="python: context.opportunity if context.opportunity != 'Others' else context.other_opportunity"></p>
+                                <div class="print-no-break h-not-first">
+                                    <h4 i18n:translate="">Patent Status</h4>
+                                    <p tal:content="context/patent_status"></p>
+                                </div>
+                                <div class="print-no-break h-not-first">
+                                    <h4 i18n:translate="">Contact</h4>
+                                    <p>Servei de Gestió de la Innovació<br /> T. + 34 93 413 623<br />
+                                        gestio.innovacio@upc.edu</p>
+                                </div>
+                                <div class="print-no-break h-not-first">
+                                    <h4 i18n:translate="">See more technologies at</h4>
+                                    <a
+                                        tal:define="patents_link string:https://www.upc.edu/innovacio/ca/patents/oferta-tecnologica"
+                                        tal:attributes="href patents_link" tal:content="patents_link"></a>
+                                </div>
                                 <div
                                 tal:define="categories context/Subject|nothing;"
                                 tal:condition="categories"
