@@ -53,19 +53,19 @@
                         <div class="row-fluid">
                             <div class="span9">
                                 <div class="box">
-                                    <div class="pint-no-break">
+                                    <div class="print-no-break">
                                         <h3 i18n:translate="">The Challenge</h3>
                                         <tal:block tal:replace="structure context/challenge/output"></tal:block>
                                     </div>
-                                    <div class="pint-no-break h-not-first">
+                                    <div class="print-no-break h-not-first">
                                         <h3 i18n:translate="">The Technology</h3>
                                         <tal:block tal:replace="structure context/technology/output"></tal:block>
                                     </div>
-                                    <div class="pint-no-break h-not-first">
+                                    <div class="print-no-break h-not-first">
                                         <h3 i18n:translate="">Innovative advantages</h3>
                                         <tal:block tal:replace="structure context/advantages/output"></tal:block>
                                     </div>
-                                    <div class="pint-no-break h-not-first">
+                                    <div class="print-no-break h-not-first">
                                         <h3 i18n:translate="">Current stage of development</h3>
                                         <tal:block tal:replace="structure context/dev_stage/output"></tal:block>
                                     </div>
