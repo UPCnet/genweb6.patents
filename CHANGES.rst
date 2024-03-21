@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-1.6 (unreleased)
+1.6 (2024-03-21)
 ----------------
 
-- Nothing changed yet.
-
+* Merge remote-tracking branch 'origin' [Ivan Kosovtsev]
+* Change contact number and category names [Ivan Kosovtsev]
 
 1.5 (2024-03-18)
 ----------------
