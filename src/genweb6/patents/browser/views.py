@@ -89,19 +89,21 @@ Configura la pàgina de patents:
 
     def __call__(self):
         tags = (
-            "Aerospace",
-            "Information and communication technologies (IoT, Networks )",
-            "Healthcare",
-            "Chemical and materials ",
-            "Energy and Environment",
-            "Leisure and Entertainment",
-            "Food and Agriculture",
-            "Supply chain and Logistics",
-            "Engineering and Industrial",
-            "Construction, Mining and Metals",
-            "Semiconductor and Electronics",
-            "Automotive and Transportation ",
+            "Aeroespacial/Aerospace",
+            "Telecomunicacions/Information and communication technologies (IoT, Networks )",
+            "Salut/Healthcare",
+            "Química/Chemical and materials ",
+            "Energia i Sostenibilitat/Energy and Environment",
+            "Oci i Entreteniment/Leisure and Entertainment",
+            "Tecnologies Agroalimentàries/Food and Agriculture",
+            "Transport i Logística/Supply chain and Logistics",
+            "Tecnologies Industrials/Engineering and Industrial",
+            "Construcció/Construction, Mining and Metals",
+            "Semiconductors i Electrònica/Semiconductor and Electronics",
+            "Enginyeria d'Automoció/Automotive and Transportation ",
         )
+        recreate_subjects = self.request.form.get('recreate_subjects', '')
+        recreate_subjects = recreate_subjects and recreate_subjects.lower() == 'true'
 
         qi = get_installer(self.context)
 
@@ -150,6 +152,10 @@ Configura la pàgina de patents:
                 container=patents,
                 subject=tags
             )
+
+        elif recreate_subjects:
+            logger.info("Recreating subjects as requested")
+            techoffer.setSubject(tags)
 
         techoffer.setLayout('techoffer_filter')
 

@@ -111,8 +111,13 @@ Vista: Configuración de oferta tecnológica (/configure_techoffer)
 -----------------------------------------------------------------
 Crea la estructura de patentes en la página.
 
+Parámetros:
+- ``recreate_subjects`` [bool]: Si se activa, se recrean las etiquetas de las ofertas tecnológicas.
+
+Funconamiento:
 - Se crea la carpeta ``patents``
 - Se crea la carpeta ``patents/ofreta-tecnologica``
+    - Si ``recreate_subjects`` está activado, se crean recrean las etiquetas ofertas tecnológicas (se pierden las que ya existen)
 - Se crea el formulario ``patents/oferta-tecnologica/create-tecnological-offer``
     - Este formulario replica los campos del tipo de contenido "Oferta Tecnológica"
       y, al enviar, crea una nueva oferta dentro de la carpeta ``patents/ofreta-tecnologica``
