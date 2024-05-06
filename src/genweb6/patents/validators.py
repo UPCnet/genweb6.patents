@@ -28,5 +28,5 @@ def maxLengthNoTags500(value, **kwargs):
     return maxLegnthNoTagsGeneric(500, value, **kwargs)
 
 
-def maxLengthNoTags1500(value, **kwargs):
-    return maxLegnthNoTagsGeneric(1500, value, **kwargs)
+def maxLengthNoTags1100(value, **kwargs):
+    return maxLegnthNoTagsGeneric(1100, value, **kwargs)

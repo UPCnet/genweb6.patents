@@ -105,6 +105,12 @@ Configura la pàgina de patents:
         recreate_subjects = self.request.form.get('recreate_subjects', '')
         recreate_subjects = recreate_subjects and recreate_subjects.lower() == 'true'
 
+        patents_folder = self.request.form.get('patents_folder', 'patents')
+        patents_folder = patents_folder.strip("/")
+
+        techoffer_folder = self.request.form.get('techoffer_folder', 'nova-oferta-tecnologica')
+        techoffer_folder = techoffer_folder.strip("/")
+
         qi = get_installer(self.context)
 
         required_products = [
@@ -129,25 +135,25 @@ Configura la pàgina de patents:
         with open(xml_config_path / 'ActionModel.xml', 'r') as f:
             actions_model = f.read()
 
-        patents = api.content.get('/ca/patents')
+        patents = api.content.get("/ca/" + patents_folder)
         logger.info("Getting patents folder")
         if not patents:
-            logger.info("Patents folder not found, creating it at /ca/patents")
+            logger.info(f"Patents folder not found, creating it at /ca/{patents_folder}")
             patents = api.content.create(
                 type='Folder',
-                id='patents',
+                id=patents_folder,
                 title='Patents',
                 container=api.content.get('/ca')
             )
 
-        techoffer = patents.get("nova-oferta-tecnologica")
+        techoffer = patents.get(techoffer_folder)
         logger.info("Getting technological offer folder")
         if not techoffer:
             logger.info("Technological offer folder not found, creating it at " +
-                        " /ca/patents/nova-oferta-tecnologica")
+                        f" /ca/{patents_folder}/{techoffer_folder}")
             techoffer = api.content.create(
                 type='Folder',
-                id='nova-oferta-tecnologica',
+                id=techoffer_folder,
                 title='Oferta Tecnològica/Technological Offer (Nova versió)',
                 container=patents,
                 subject=tags

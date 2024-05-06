@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-02-15 08:55+0000\n"
+"POT-Creation-Date: 2024-05-03 09:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,64 +17,72 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: genweb6.patents\n"
 
-#: ../content/techoffer/techoffer.py:134
-msgid "'Specify business opportunity' field required when 'Others' is selected for 'Business Opportunity'"
+#: ../content/techoffer/techoffer.py:149
+msgid "'Specify business opportunity' field required when 'Others'is selected for 'Business Opportunity'"
 msgstr ""
 
-#: ../content/techoffer/techoffer.pt:64
-#: ../content/techoffer/techoffer.py:87
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.pt:81
+#: ../content/techoffer/techoffer.py:96
 msgid "Applications and Target Market"
 msgstr ""
 
-#: ../content/techoffer/techoffer.pt:90
-#: ../content/techoffer/techoffer.py:116
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.pt:108
+#: ../content/techoffer/techoffer.py:130
 msgid "Business Opportunity"
 msgstr ""
 
-#: ../content/techoffer/techoffer.pt:94
+#: ../content/techoffer/techoffer.pt:115
 msgid "Contact"
 msgstr ""
 
-#: ../content/techoffer/techoffer.pt:62
-#: ../content/techoffer/techoffer.py:80
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.pt:77
+#: ../content/techoffer/techoffer.py:89
 msgid "Current stage of development"
 msgstr ""
 
-#: ../content/techoffer/techoffer.py:45
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:53
 msgid "Description"
 msgstr ""
 
-#: ../content/techoffer/techoffer.py:121
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:135
 msgid "Fill this field if you selected 'Others' for 'Business Opportunity'"
 msgstr ""
 
-#: ../content/techoffer/techoffer.py:99
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:108
 msgid "First picture"
 msgstr ""
 
-#: ../content/techoffer/techoffer.py:103
+#: ../content/techoffer/techoffer.py:112
 msgid "First picture caption"
 msgstr ""
 
-#: ../content/techoffer/techoffer.pt:60
-#: ../content/techoffer/techoffer.py:73
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.pt:73
+#: ../content/techoffer/techoffer.py:82
 msgid "Innovative advantages"
 msgstr ""
 
-#: ../configure.zcml:39
+#: ../configure.zcml:41
 msgid "Installs the genweb6.patents add-on."
 msgstr ""
 
-#: ../content/techoffer/techoffer.py:93
+#: ../content/techoffer/techoffer.py:102
 msgid "Lead Image"
 msgstr ""
 
-#: ../vocabularies.py:43
+#: ../vocabularies.py:44
 msgid "Others"
 msgstr ""
 
-#: ../content/techoffer/techoffer.pt:92
-#: ../content/techoffer/techoffer.py:126
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.pt:111
+#: ../content/techoffer/techoffer.py:141
 msgid "Patent Status"
 msgstr ""
 
@@ -82,23 +90,27 @@ msgstr ""
 msgid "Pendent offers to review"
 msgstr ""
 
-#: ../content/techoffer/techoffer.py:52
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:61
 msgid "Reference number"
 msgstr ""
 
-#: ../content/techoffer/techoffer.py:111
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:123
 msgid "Second image caption"
 msgstr ""
 
-#: ../content/techoffer/techoffer.py:107
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:119
 msgid "Second picture"
 msgstr ""
 
-#: ../content/techoffer/techoffer.pt:97
+#: ../content/techoffer/techoffer.pt:120
 msgid "See more technologies at"
 msgstr ""
 
-#: ../content/techoffer/techoffer.py:120
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:134
 msgid "Specify Business Opportunity"
 msgstr ""
 
@@ -110,56 +122,39 @@ msgstr ""
 msgid "Technological Offer Filter"
 msgstr ""
 
-#: ../content/techoffer/techoffer.py:66
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:75
 msgid "Technology"
 msgstr ""
 
-#: ../content/techoffer/techoffer.pt:56
-#: ../content/techoffer/techoffer.py:59
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.pt:65
+#: ../content/techoffer/techoffer.py:68
 msgid "The Challenge"
 msgstr ""
 
-#: ../content/techoffer/techoffer.pt:58
+#: ../content/techoffer/techoffer.pt:69
 msgid "The Technology"
 msgstr ""
 
-#: ../content/techoffer/techoffer.py:38
+#: ../browser/xml_form_config/FieldsModel.xml
+#: ../content/techoffer/techoffer.py:44
 msgid "Title"
 msgstr ""
 
-#: ../configure.zcml:48
+#: ../configure.zcml:50
 msgid "Uninstalls the genweb6.patents add-on."
 msgstr ""
 
-#: ../browser/xml_form_config/FieldsModel.xml
-#: ../content/techoffer/techoffer.py:74
-msgid "advantages_description"
-msgstr ""
-
-#: ../browser/xml_form_config/FieldsModel.xml
-#: ../content/techoffer/techoffer.py:88
-msgid "applications_description"
-msgstr ""
-
-#: ../browser/xml_form_config/FieldsModel.xml
-#: ../content/techoffer/techoffer.py:60
-msgid "challenge_description"
-msgstr ""
-
-#: ../browser/xml_form_config/FieldsModel.xml
-#: ../content/techoffer/techoffer.py:81
-msgid "dev_stage_description"
-msgstr ""
-
-#: ../content/techoffer/techoffer.pt:107
+#: ../content/techoffer/techoffer.pt:131
 msgid "filed under:"
 msgstr ""
 
-#: ../configure.zcml:39
+#: ../configure.zcml:41
 msgid "genweb6.patents"
 msgstr ""
 
-#: ../configure.zcml:48
+#: ../configure.zcml:50
 msgid "genweb6.patents (uninstall)"
 msgstr ""
 
@@ -168,12 +163,20 @@ msgstr ""
 msgid "label_tags"
 msgstr ""
 
+#. Default: "Maximum length of ${max} characters exceeded."
+#: ../widgets/maxlengthtextfield/maxlengthtextfield.py:25
+msgid "max_length_exceeded"
+msgstr ""
+
+#: ../content/techoffer/techoffer.py:69
+msgid "max_length_info"
+msgstr ""
+
+#: ../content/techoffer/techoffer.py:45
+msgid "max_length_textfield_info"
+msgstr ""
+
 #. Default: "Cerca"
 #: ../browser/views_templates/techoffer_filter/techoffer_filter.pt:25
 msgid "search"
-msgstr ""
-
-#: ../browser/xml_form_config/FieldsModel.xml
-#: ../content/techoffer/techoffer.py:67
-msgid "technology_description"
 msgstr ""

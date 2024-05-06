@@ -18,12 +18,16 @@ module.exports = function (grunt) {
             css: {
                 src: ['stylesheets/theme.css'],
                 dest: 'stylesheets/theme-concat.css',
+            },
+            js: {
+                src: ['js/main/*.js'],
+                dest: 'js/theme-concat.js',
             }
         },
         cssmin: {
-            css : {
-                src : ["stylesheets/theme-concat.css"],
-                dest : "stylesheets/theme-patents.min.css",
+            css: {
+                src: ["stylesheets/theme-concat.css"],
+                dest: "stylesheets/theme-patents.min.css",
             }
         },
         watch: {
@@ -33,17 +37,36 @@ module.exports = function (grunt) {
                 ],
                 tasks: ['compass:css', 'concat:css', 'cssmin:css']
             },
+            js: {
+                //     files: [
+                //         'js/main/*'
+                //     ],
+                //     tasks: ['concat:js', 'uglify:mainjs']
+                files: [
+                    'js/widgets/*'
+                ],
+                tasks: ['uglify:js']
+            },
+
         },
         uglify: {
             js: {
-                files: {}
-            }
+                files: {
+                    'js/widget-maxlengthtext.min.js': 'js/widgets/maxlengthtext.js',
+                }
+            },
+            // mainjs: {
+            //     files: {
+            //         'js/theme-patents.min.js': 'js/theme-concat.js'
+            //     }
+            // }
+
         },
         browserSync: {
             plone: {
                 bsFiles: {
-                    src : [
-                      'stylesheets/*.css'
+                    src: [
+                        'stylesheets/*.css'
                     ]
                 },
                 options: {

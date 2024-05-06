@@ -5,8 +5,8 @@
         component=".validators.maxLengthNoTags500"
     />
     <utility
-        name="maxLengthNoTags1500"
+        name="maxLengthNoTags1100"
         provides="collective.easyform.validators.IFieldValidator"
-        component=".validators.maxLengthNoTags1500"
+        component=".validators.maxLengthNoTags1100"
     />
 </configure>

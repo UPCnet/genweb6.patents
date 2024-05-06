@@ -17,6 +17,7 @@
   <include package="z3c.jbot" file="meta.zcml" />
 
   <include package=".browser" />
+  <include package=".widgets" />
 
   <include file="permissions.zcml" />
   <include file="upgrades.zcml" />

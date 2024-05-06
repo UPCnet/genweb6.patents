@@ -1,0 +1,34 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:z3c="http://namespaces.zope.org/z3c"
+  i18n_domain="plone">
+
+  <class class=".maxlengthtextfield.maxlengthtextfield.MaxLengthTextFieldWidget">
+    <require
+      permission="zope.Public"
+      interface=".maxlengthtextfield.maxlengthtextfield.IMaxLengthTextFieldWidget"
+      />
+  </class>
+
+  <z3c:widgetTemplate
+    mode="input"
+    widget=".maxlengthtextfield.maxlengthtextfield.IMaxLengthTextFieldWidget"
+    layer="plone.app.z3cform.interfaces.IPloneFormLayer"
+    template="maxlengthtextfield/maxlengthtextfield.pt"
+    />
+
+  <class class=".maxlengthtextareafield.maxlengthtextareafield.MaxLengthTextAreaFieldWidget">
+    <require
+      permission="zope.Public"
+      interface=".maxlengthtextareafield.maxlengthtextareafield.IMaxLengthTextAreaFieldWidget"
+      />
+  </class>
+
+  <z3c:widgetTemplate
+    mode="input"
+    widget=".maxlengthtextareafield.maxlengthtextareafield.IMaxLengthTextAreaFieldWidget"
+    layer="plone.app.z3cform.interfaces.IPloneFormLayer"
+    template="maxlengthtextareafield/maxlengthtextareafield.pt"
+    />
+
+</configure>

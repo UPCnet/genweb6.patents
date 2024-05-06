@@ -11,6 +11,11 @@ from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer, invariant, Invalid  # noqa F401
 from genweb6.patents.validators import maxLengthValidatorNoTags
+from plone.autoform import directives
+from genweb6.patents.widgets.maxlengthtextfield.maxlengthtextfield import MaxLengthTextFieldWidget
+from genweb6.patents.widgets.maxlengthtextareafield.maxlengthtextareafield import (
+    MaxLengthTextAreaFieldWidget
+)
 
 
 def max_length_validator(max_length):
@@ -32,17 +37,21 @@ def max_length_validator(max_length):
 
 class ITechOffer(model.Schema, IDexteritySchema):
     textindexer.searchable('title')
+    directives.widget('title', MaxLengthTextFieldWidget)
     title = schema.TextLine(
         title=_(u"Title"),
-        description=u"",
-        required=True
+        description=_(u"max_length_textfield_info", mapping={'max': 150}),
+        required=True,
+        max_length=150
     )
 
     textindexer.searchable('description')
+    directives.widget('description', MaxLengthTextAreaFieldWidget)
     description = schema.Text(
         title=_(u"Description"),
-        description=u"",
-        required=False
+        description=_(u"max_length_textfield_info", mapping={'max': 500}),
+        required=False,
+        max_length=500
     )
 
     textindexer.searchable('ref_num')
@@ -55,35 +64,35 @@ class ITechOffer(model.Schema, IDexteritySchema):
     textindexer.searchable('challenge')
     challenge = RichText(
         title=_(u"The Challenge"),
-        description=_(u"challenge_description"),
-        constraint=max_length_validator(1500)
+        description=_(u"max_length_info", mapping={'max': 1100}),
+        constraint=max_length_validator(1100)
     )
 
     textindexer.searchable('technology')
     technology = RichText(
         title=_(u"Technology"),
-        description=_(u"technology_description"),
-        constraint=max_length_validator(1500)
+        description=_(u"max_length_info", mapping={"max": 1100}),
+        constraint=max_length_validator(1100)
     )
 
     textindexer.searchable('advantages')
     advantages = RichText(
         title=_(u"Innovative advantages"),
-        description=_(u"advantages_description"),
-        constraint=max_length_validator(1500)
+        description=_(u"max_length_info", mapping={"max": 1100}),
+        constraint=max_length_validator(1100)
     )
 
     textindexer.searchable('dev_stage')
     dev_stage = RichText(
         title=_(u"Current stage of development"),
-        description=_(u"dev_stage_description"),
+        description=_(u"max_length_info", mapping={"max": 500}),
         constraint=max_length_validator(500)
     )
 
     textindexer.searchable('applications')
     applications = RichText(
         title=_(u"Applications and Target Market"),
-        description=_(u"applications_description"),
+        description=_(u"max_length_info", mapping={"max": 500}),
         constraint=max_length_validator(500)
     )
 
@@ -97,17 +106,26 @@ class ITechOffer(model.Schema, IDexteritySchema):
         title=_(u"First picture"),
         required=False
     )
+
+    directives.widget('caption1', MaxLengthTextFieldWidget)
     caption1 = schema.TextLine(
         title=_(u"First picture caption"),
-        required=False
+        required=False,
+        description=_(u"max_length_textfield_info", mapping={'max': 200}),
+        max_length=200
+
     )
     image2 = namedfile.NamedBlobImage(
         title=_(u"Second picture"),
         required=False
     )
+
+    directives.widget('caption2', MaxLengthTextFieldWidget)
     caption2 = schema.TextLine(
         title=_(u"Second image caption"),
-        required=False
+        required=False,
+        description=_(u"max_length_textfield_info", mapping={'max': 200}),
+        max_length=200
     )
 
     opportunity = schema.Choice(
@@ -116,7 +134,8 @@ class ITechOffer(model.Schema, IDexteritySchema):
     )
     other_opportunity = schema.TextLine(
         title=_(u"Specify Business Opportunity"),
-        description=_(u"Fill this field if you selected 'Others' for 'Business Opportunity'"),
+        description=_(
+            u"Fill this field if you selected 'Others' for 'Business Opportunity'"),
         required=False
     )
 

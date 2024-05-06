@@ -1,13 +1,17 @@
 <model xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="genweb6.patents" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns:easyform="http://namespaces.plone.org/supermodel/easyform" xmlns="http://namespaces.plone.org/supermodel/schema">
   <schema>
     <field name="title" type="zope.schema.TextLine" easyform:serverSide="False" easyform:THidden="False">
-      <description/>
+      <description>Màxim 150 caràcters./A maximum of 150 characters is allowed.</description>
+      <max_length>150</max_length>
       <title i18n:translate="">Title</title>
+      <form:widget type="genweb6.patents.widgets.maxlengthtextfield.maxlengthtextfield.MaxLengthTextFieldWidget"/>
     </field>
     <field name="description" type="zope.schema.Text">
-      <description/>
+      <description>Màxim 500 caràcters./A maximum of 500 characters is allowed.</description>
+      <max_length>500</max_length>
       <required>False</required>
       <title i18n:translate="">Description</title>
+      <form:widget type="genweb6.patents.widgets.maxlengthtextareafield.maxlengthtextareafield.MaxLengthTextAreaFieldWidget"/>
     </field>
     <field name="ref_num" type="zope.schema.TextLine" easyform:serverSide="False" easyform:THidden="True">
       <default>-</default>
@@ -20,24 +24,24 @@
       <title>Categoria/Category</title>
       <vocabulary>genweb6.patents.vocabularies.parent_categories</vocabulary>
     </field>
-    <field name="challenge" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1500" easyform:THidden="False">
-      <description i18n:translate="">challenge_description</description>
+    <field name="challenge" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1100" easyform:THidden="False">
+      <description>Màxim 1100 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/A maximum of 1100 characters is allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box.</description>
       <title i18n:translate="">The Challenge</title>
     </field>
-    <field name="technology" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1500" easyform:THidden="False">
-      <description i18n:translate="">technology_description</description>
+    <field name="technology" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1100" easyform:THidden="False">
+      <description>Màxim 1100 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/A maximum of 1100 characters is allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box.</description>
       <title i18n:translate="">Technology</title>
     </field>
-    <field name="advantages" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1500" easyform:THidden="False">
-      <description i18n:translate="">advantages_description</description>
+    <field name="advantages" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags1100" easyform:THidden="False">
+      <description>Màxim 1100 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/A maximum of 1100 characters is allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box.</description>
       <title i18n:translate="">Innovative advantages</title>
     </field>
     <field name="dev_stage" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags500" easyform:THidden="False">
-      <description i18n:translate="">dev_stage_description</description>
+      <description>Màxim 500 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/A maximum of 500 characters is allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box.</description>
       <title i18n:translate="">Current stage of development</title>
     </field>
     <field name="applications" type="plone.app.textfield.RichText" easyform:serverSide="False" easyform:validators="maxLengthNoTags500" easyform:THidden="False">
-      <description i18n:translate="">applications_description</description>
+      <description>Màxim 500 caràcters. Pots veure el nombre de caràcters actuals clicant sobre el recompte de paraules que és a sota dreta d'aquesta caixa de text/A maximum of 500 characters is allowed. You can see the current number of characters by clicking on the word count that is below on the right side of this text box.</description>
       <title i18n:translate="">Applications and Target Market</title>
     </field>
     <field name="image1" type="plone.namedfile.field.NamedBlobImage">
@@ -46,9 +50,11 @@
       <title i18n:translate="">First picture</title>
     </field>
     <field name="caption1" type="zope.schema.TextLine">
-      <description/>
+      <description>Màxim 200 caràcters./A maximum of 200 characters is allowed.</description>
+      <max_length>200</max_length>
       <required>False</required>
       <title>Comentari de la primera imatge/First picture caption</title>
+      <form:widget type="genweb6.patents.widgets.maxlengthtextfield.maxlengthtextfield.MaxLengthTextFieldWidget"/>
     </field>
     <field name="image2" type="plone.namedfile.field.NamedBlobImage" easyform:serverSide="False" easyform:THidden="False">
       <description/>
@@ -56,9 +62,11 @@
       <title i18n:translate="">Second picture</title>
     </field>
     <field name="caption2" type="zope.schema.TextLine">
-      <description/>
+      <description>Màxim 200 caràcters./A maximum of 200 characters is allowed.</description>
+      <max_length>200</max_length>
       <required>False</required>
       <title i18n:translate="">Second image caption</title>
+      <form:widget type="genweb6.patents.widgets.maxlengthtextfield.maxlengthtextfield.MaxLengthTextFieldWidget"/>
     </field>
     <field name="opportunity" type="zope.schema.Choice" easyform:serverSide="False" easyform:THidden="False">
       <default>Technology available to be licensed</default>

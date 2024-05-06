@@ -113,6 +113,8 @@ Crea la estructura de patentes en la página.
 
 Parámetros:
 - ``recreate_subjects`` [bool]: Si se activa, se recrean las etiquetas de las ofertas tecnológicas.
+- ``patents_folder`` [string]: Nombre de la carpeta que contendrá la carpeta de ofertas tecnológicas.
+- ``techoffer_folder`` [string]: Nombre de la carpeta que contendrá todas las ofertas tecnológicas, el formularió de creación de una oferta y la coleccion de ofertas en estado borrador.
 
 Funconamiento:
 - Se crea la carpeta ``patents``
@@ -124,3 +126,5 @@ Funconamiento:
 - Se crea la colección ``patents/ofreta-tecnologica/technological-offers-to-review``
     - Esta colección recopila todas las ofertas en estado "Borrador"
    
+Ejemplo:
+``localhost:8080/Plone/configure_techoffer?recreate_subjects=True&patents_folder=patents&techoffer_folder=oferta-tecnologica``

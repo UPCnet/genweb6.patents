@@ -1,18 +1,33 @@
 /* line 2, ../scss/_techoffer.scss */
-body.portaltype-techoffer {
+body.portaltype-techoffer,
+form[class~="++add++TechOffer"] {
   /*Make all grid-sized elements block level again*/
 }
-/* line 5, ../scss/_techoffer.scss */
-body.portaltype-techoffer .print-only {
+/* line 6, ../scss/_techoffer.scss */
+body.portaltype-techoffer .print-only,
+form[class~="++add++TechOffer"] .print-only {
   display: none;
 }
-/* line 9, ../scss/_techoffer.scss */
-body.portaltype-techoffer .h-not-first > h3 {
+/* line 10, ../scss/_techoffer.scss */
+body.portaltype-techoffer .h-not-first > h3,
+form[class~="++add++TechOffer"] .h-not-first > h3 {
   margin-top: 2rem;
 }
+/* line 14, ../scss/_techoffer.scss */
+body.portaltype-techoffer .to-image,
+form[class~="++add++TechOffer"] .to-image {
+  width: fit-content;
+  margin: 0 auto;
+}
+/* line 19, ../scss/_techoffer.scss */
+body.portaltype-techoffer .info-feedback,
+form[class~="++add++TechOffer"] .info-feedback {
+  color: #b2b2b2;
+}
 @media only screen and (max-width: 639px) {
-  /* line 15, ../scss/_techoffer.scss */
-  body.portaltype-techoffer .row-fluid [class*="span"] {
+  /* line 25, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .row-fluid [class*="span"],
+  form[class~="++add++TechOffer"] .row-fluid [class*="span"] {
     float: none !important;
     display: block !important;
     width: auto !important;
@@ -21,13 +36,14 @@ body.portaltype-techoffer .h-not-first > h3 {
 }
 @media print {
   /* line 2, ../scss/_techoffer.scss */
-  body.portaltype-techoffer {
+  body.portaltype-techoffer,
+  form[class~="++add++TechOffer"] {
     background: white;
     font-size: 11px !important;
     padding: 0px !important;
     line-height: normal !important;
   }
-  /* line 31, ../scss/_techoffer.scss */
+  /* line 41, ../scss/_techoffer.scss */
   body.portaltype-techoffer #above-content-wrapper,
   body.portaltype-techoffer #content-header,
   body.portaltype-techoffer #back-to-top,
@@ -36,70 +52,113 @@ body.portaltype-techoffer .h-not-first > h3 {
   body.portaltype-techoffer #techoffer-tags-list,
   body.portaltype-techoffer #social_tags,
   body.portaltype-techoffer .portalMessage,
-  body.portaltype-techoffer .no-print {
+  body.portaltype-techoffer .no-print,
+  form[class~="++add++TechOffer"] #above-content-wrapper,
+  form[class~="++add++TechOffer"] #content-header,
+  form[class~="++add++TechOffer"] #back-to-top,
+  form[class~="++add++TechOffer"] #portal-column-one,
+  form[class~="++add++TechOffer"] #global_statusmessage,
+  form[class~="++add++TechOffer"] #techoffer-tags-list,
+  form[class~="++add++TechOffer"] #social_tags,
+  form[class~="++add++TechOffer"] .portalMessage,
+  form[class~="++add++TechOffer"] .no-print {
     display: none !important;
   }
-  /* line 43, ../scss/_techoffer.scss */
-  body.portaltype-techoffer .container {
+  /* line 53, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .container,
+  form[class~="++add++TechOffer"] .container {
     margin: 0px !important;
     padding: 0px !important;
     max-width: 100% !important;
   }
-  /* line 49, ../scss/_techoffer.scss */
-  body.portaltype-techoffer a, body.portaltype-techoffer a:visited {
+  /* line 59, ../scss/_techoffer.scss */
+  body.portaltype-techoffer a, body.portaltype-techoffer a:visited,
+  form[class~="++add++TechOffer"] a,
+  form[class~="++add++TechOffer"] a:visited {
     color: black !important;
     text-decoration: none !important;
   }
-  /* line 54, ../scss/_techoffer.scss */
-  body.portaltype-techoffer h1 {
+  /* line 64, ../scss/_techoffer.scss */
+  body.portaltype-techoffer h1,
+  form[class~="++add++TechOffer"] h1 {
     margin-top: 0px !important;
-    margin-bottom: 0px !important;
-    font-size: 16px !important;
+    margin-bottom: 10px !important;
+    font-size: 20px !important;
+    text-align: center !important;
   }
-  /* line 60, ../scss/_techoffer.scss */
-  body.portaltype-techoffer h3, body.portaltype-techoffer h4 {
+  /* line 71, ../scss/_techoffer.scss */
+  body.portaltype-techoffer h3, body.portaltype-techoffer h4,
+  form[class~="++add++TechOffer"] h3,
+  form[class~="++add++TechOffer"] h4 {
     font-size: 12px !important;
     margin-bottom: 0.2rem !important;
-    margin-top: 0.2rem !important;
-  }
-  /* line 65, ../scss/_techoffer.scss */
-  body.portaltype-techoffer h4 {
     margin-top: 1rem !important;
   }
-  /* line 69, ../scss/_techoffer.scss */
-  body.portaltype-techoffer #parent-fieldname-text {
+  /* line 77, ../scss/_techoffer.scss */
+  body.portaltype-techoffer #parent-fieldname-text,
+  form[class~="++add++TechOffer"] #parent-fieldname-text {
     margin-top: 10px !important;
   }
-  /* line 73, ../scss/_techoffer.scss */
-  body.portaltype-techoffer #content-core, body.portaltype-techoffer #main-container, body.portaltype-techoffer .row-fluid [class*="span"] {
+  /* line 80, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .content-description,
+  form[class~="++add++TechOffer"] .content-description {
+    font-size: 11px !important;
+  }
+  /* line 83, ../scss/_techoffer.scss */
+  body.portaltype-techoffer #content-core, body.portaltype-techoffer #main-container, body.portaltype-techoffer .row-fluid [class*="span"],
+  form[class~="++add++TechOffer"] #content-core,
+  form[class~="++add++TechOffer"] #main-container,
+  form[class~="++add++TechOffer"] .row-fluid [class*="span"] {
     margin-bottom: 0px !important;
     padding-bottom: 0px !important;
   }
-  /* line 78, ../scss/_techoffer.scss */
-  body.portaltype-techoffer .box, body.portaltype-techoffer header, body.portaltype-techoffer p {
+  /* line 88, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .box, body.portaltype-techoffer header,
+  form[class~="++add++TechOffer"] .box,
+  form[class~="++add++TechOffer"] header {
     margin-bottom: 0px !important;
   }
-  /* line 82, ../scss/_techoffer.scss */
-  body.portaltype-techoffer .box {
-    padding: 5px !important;
+  /* line 92, ../scss/_techoffer.scss */
+  body.portaltype-techoffer header.print-only,
+  form[class~="++add++TechOffer"] header.print-only {
     text-align: justify !important;
   }
-  /* line 87, ../scss/_techoffer.scss */
-  body.portaltype-techoffer .card {
-    padding: 2px !important;
-    margin: 0 !important;
+  /* line 96, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .box,
+  form[class~="++add++TechOffer"] .box {
+    padding: 0px !important;
+    text-align: justify !important;
+    border: unset !important;
   }
-  /* line 92, ../scss/_techoffer.scss */
-  body.portaltype-techoffer .print-only {
+  /* line 102, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .card,
+  form[class~="++add++TechOffer"] .card {
+    padding: 2px !important;
+    padding-left: 5px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  /* line 109, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .to-image img,
+  form[class~="++add++TechOffer"] .to-image img {
+    max-height: 210px !important;
+    width: auto !important;
+  }
+  /* line 114, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .print-only,
+  form[class~="++add++TechOffer"] .print-only {
     display: initial !important;
   }
-  /* line 98, ../scss/_techoffer.scss */
-  body.portaltype-techoffer #head-upc-logo, body.portaltype-techoffer img#head-upc-logo {
+  /* line 120, ../scss/_techoffer.scss */
+  body.portaltype-techoffer #head-upc-logo, body.portaltype-techoffer img#head-upc-logo,
+  form[class~="++add++TechOffer"] #head-upc-logo,
+  form[class~="++add++TechOffer"] img#head-upc-logo {
     margin-bottom: 1rem !important;
     max-width: 250px;
   }
-  /* line 103, ../scss/_techoffer.scss */
-  body.portaltype-techoffer .print-no-break {
+  /* line 126, ../scss/_techoffer.scss */
+  body.portaltype-techoffer .print-no-break,
+  form[class~="++add++TechOffer"] .print-no-break {
     break-inside: avoid !important;
   }
 }

@@ -1,5 +1,6 @@
 
-body.portaltype-techoffer {
+body.portaltype-techoffer,
+form[class~="++add++TechOffer"] {
 /*Make all grid-sized elements block level again*/
 
     .print-only {
@@ -8,6 +9,15 @@ body.portaltype-techoffer {
 
     .h-not-first > h3 {
         margin-top: 2rem;
+    }
+
+    .to-image {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .info-feedback {
+        color: #b2b2b2;
     }
 
     @media only screen and (max-width: 639px){
@@ -53,40 +63,52 @@ body.portaltype-techoffer {
 
         h1 {
             margin-top: 0px !important;
-            margin-bottom: 0px !important;
-            font-size: 16px !important;
+            margin-bottom: 10px !important;
+            font-size: 20px !important;
+            text-align: center !important;
         }
 
         h3, h4 {
             font-size: 12px !important;
             margin-bottom: 0.2rem !important;
-            margin-top: 0.2rem !important;
-        }   
-        h4 {
             margin-top: 1rem !important;
-        }
+        }   
 
         #parent-fieldname-text {
             margin-top: 10px !important;
         }
-
+        .content-description {
+            font-size: 11px !important;
+        }
         #content-core, #main-container, .row-fluid [class*="span"]{
             margin-bottom: 0px !important;
             padding-bottom: 0px !important;
         }
         
-        .box, header, p {
+        .box, header {
             margin-bottom: 0px !important;
+        }
+        
+        header.print-only {
+            text-align: justify !important;
         }
 
         .box {
-            padding: 5px !important;
+            padding: 0px !important;
             text-align: justify !important;
+            border: unset !important;
         }
 
         .card {
             padding: 2px !important;
+            padding-left: 5px !important;
             margin: 0 !important;
+            border-radius: 0 !important;
+        }
+
+        .to-image img {
+            max-height: 210px !important;
+            width: auto !important;
         }
 
         .print-only {
@@ -98,6 +120,7 @@ body.portaltype-techoffer {
         #head-upc-logo, img#head-upc-logo{
             margin-bottom: 1rem !important;
             max-width: 250px;
+
         }
         
         .print-no-break {

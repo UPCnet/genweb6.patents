@@ -13,7 +13,8 @@
         <metal:content-core fill-slot="main">
             <header>
                 <img tal:attributes="src string:${context/absolute_url}/@@gw-logo"
-                    class="print-only" id='head-upc-logo' />
+                    class="print-only mb-0" id='head-upc-logo' width="200" 
+                    style="margin-bottom: 0.5rem !important;"/>
                     <div id="social_tags">
                         <a target="_blank" tal:attributes="href python: f'https://twitter.com/intent/tweet?url={context.absolute_url()}&amp;text=Equip humà'" title="Twitter">
                           <i class="bi bi-twitter"></i>
@@ -31,13 +32,13 @@
                             <i class="bi bi-printer"></i>
                         </a>
                     </div>
-                <h1 tal:content="context/title"></h1>
+                <h1 class="no-print" tal:content="context/title"></h1>
             </header>
             <metal:block define-macro="content-core">
                 <div id="content-core">
-                    <p>
+                    <p class="no-print">
                         <strong>
-                            <span tal:content='context/description'></span> Ref. <span
+                            <span class="content-description" tal:content='context/description'></span> Ref. <span
                                 tal:content="context/ref_num"></span>
                         </strong>
                     </p>
@@ -52,6 +53,13 @@
                     <div id="parent-fieldname-text">
                         <div class="row-fluid">
                             <div class="span9">
+                                <header class="print-only">
+                                    <h1 tal:content="context/title"></h1>
+                                    <p>
+                                        <strong tal:content="context/description"></strong> 
+                                        Ref: <span tal:content="context/ref_num"></span>
+                                    </p>
+                                </header>
                                 <div class="box">
                                     <div class="print-no-break">
                                         <h3 i18n:translate="">The Challenge</h3>
@@ -85,14 +93,18 @@
                                 class="span3">
 
                                 <tal:img1block tal:condition="python: bool(image1_large)">
-                                    <img tal:replace="structure python: image1_large.tag()" />
+                                    <div class="to-image">
+                                        <img tal:replace="structure python: image1_large.tag()" />
+                                    </div>
                                     <p tal:define="caption context/caption1 | nothing"
                                         tal:condition="python: bool(caption)"
                                         class="card p-3 text-bg-light mb-4" tal:content="caption"></p>
                                 </tal:img1block>
 
                                 <tal:img2block tal:condition="python: bool(image2_large)">
-                                    <img tal:replace="structure python: image2_large.tag()" />
+                                    <div class="to-image">
+                                        <img tal:replace="structure python: image2_large.tag()" />
+                                    </div>
                                     <p tal:define="caption context/caption2 | nothing"
                                         tal:condition="python: bool(caption)"
                                         class="card p-3 text-bg-light mb-4" tal:content="caption"></p>
