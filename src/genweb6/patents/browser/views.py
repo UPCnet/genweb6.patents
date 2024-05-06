@@ -169,7 +169,7 @@ Configura la pàgina de patents:
         logger.info("Getting create technological offer form")
         if easyform:
             logger.warning("Create technological offer form already exists. Overwriting it at" +
-                           "/ca/patents/nova-oferta-tecnologica/create-technological-offer")
+                           f"/ca/{patents_folder}/{techoffer_folder}/create-technological-offer")
             api.content.delete(easyform)
 
         easyform = api.content.create(
