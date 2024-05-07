@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-1.7 (unreleased)
+1.7 (2024-05-07)
 ----------------
 
-- Nothing changed yet.
-
+* Fix tests [Ivan Kosovtsev]
+* Add widgets, translation changes and configure view params for folder names [Ivan Kosovtsev]
 
 1.6 (2024-03-21)
 ----------------
