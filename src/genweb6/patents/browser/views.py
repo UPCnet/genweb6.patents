@@ -29,7 +29,7 @@ class TechOfferFilterView(BrowserView):
         kw = {}
         if filtered:
             if self.tags:
-                kw['Subject'] = {'query': self.tags, 'operator': 'and'}
+                kw['Subject'] = {'query': self.tags, 'operator': 'or'}
             if self.query:
                 kw['SearchableText'] = self.query
 
