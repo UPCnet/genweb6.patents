@@ -2,11 +2,10 @@ Changelog
 =========
 
 
-1.8 (unreleased)
+1.8 (2024-07-17)
 ----------------
 
-- Nothing changed yet.
-
+* [UPD] Modificar vista con etiquetas para que busque con or en vez de and [Iago López Fernández]
 
 1.7 (2024-05-07)
 ----------------
