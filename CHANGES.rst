@@ -2,11 +2,10 @@ Changelog
 =========
 
 
-1.9 (unreleased)
+1.9 (2024-07-30)
 ----------------
 
-- Nothing changed yet.
-
+* [UPD] URL patents link [Iago López]
 
 1.8 (2024-07-17)
 ----------------
