@@ -123,7 +123,7 @@
                                 <div class="print-no-break h-not-first">
                                     <h4 i18n:translate="">See more technologies at</h4>
                                     <a
-                                        tal:define="patents_link string:https://rdi.upc.edu/ca/rdi-a-la-upc/tecnologia-comercialitzable/cartera-de-tecnologia-comercialitzable"
+                                        tal:define="patents_link string:https://rdi.upc.edu/ca/rdi-a-la-upc/oferta-tecnologica/cartera-de-tecnologia-comercialitzable"
                                         tal:attributes="href patents_link" tal:content="patents_link"></a>
                                 </div>
                                 <div
