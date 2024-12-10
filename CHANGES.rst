@@ -2,11 +2,10 @@ Changelog
 =========
 
 
-1.10 (unreleased)
+1.10 (2024-12-10)
 -----------------
 
-- Nothing changed yet.
-
+* [UPD] Modificar enlace que han cambiado [Iago López]
 
 1.9 (2024-07-30)
 ----------------
