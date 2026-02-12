@@ -373,7 +373,8 @@ class ViewsIntegrationTest(unittest.TestCase):
         for tags in tags_list:
             self._create_techoffer(tags=tags, state='published')
 
-        self.assertEqual(len(view.get_content()), 2)
+        # Con operator='or' devuelve elementos que tengan 'a' O 'b': 5 elementos
+        self.assertEqual(len(view.get_content()), 5)
 
     def test_techoffer_filter_query_get_content_with_query_no_filter(self):
         self.request.form['q'] = 'techoffer 1'
