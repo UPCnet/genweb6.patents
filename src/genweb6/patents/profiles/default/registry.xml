@@ -47,4 +47,12 @@
     </value>
   </record>
 
+  <!-- folder_contents (pat-structure): plone.icon.contenttype mas portal type normalizado -->
+  <record name="plone.icon.contenttype/techoffer">
+    <field type="plone.registry.field.TextLine">
+      <title>Patents TechOffer</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/file-earmark-richtext.svg</value>
+  </record>
+
 </registry>
